@@ -53,8 +53,7 @@ public class UnknownCompositionMaterials {
         McGuffium239 = new Material.Builder(1512, "mc_guffium_239")
                 .fluid().build();
 
-        IndiumConcentrate = new Material.Builder(1513, "indium_concentrate")
-                .fluid(FluidTypes.ACID).color(0x0E2950).build();
+        // Free ID 1513
 
         SeedOil = new Material.Builder(1514, "seed_oil")
                 .fluid().color(0xFFFFFF)
@@ -152,7 +151,7 @@ public class UnknownCompositionMaterials {
                 .fluid(FluidTypes.GAS).color(0xA3A3A0)
                 .fluidTemp(775).flags(FLAMMABLE).build();
 
-        HydroCrackedPropene = new Material.Builder(1548, "hydrocracked_propene")
+        HydroCrackedPropene = new Material.Builder(1548, "hydrocracked_propylene")
                 .fluid(FluidTypes.GAS).color(0xBEA540)
                 .fluidTemp(775).flags(FLAMMABLE).build();
 
@@ -164,7 +163,7 @@ public class UnknownCompositionMaterials {
                 .fluid(FluidTypes.GAS).color(0x852C18)
                 .fluidTemp(775).flags(FLAMMABLE).build();
 
-        HydroCrackedButene = new Material.Builder(1551, "hydrocracked_butene")
+        HydroCrackedButene = new Material.Builder(1551, "hydrocracked_butylene")
                 .fluid(FluidTypes.GAS).color(0x993E05)
                 .fluidTemp(775).flags(FLAMMABLE).build();
 
@@ -180,7 +179,7 @@ public class UnknownCompositionMaterials {
                 .fluid(FluidTypes.GAS).color(0xA3A3A0)
                 .fluidTemp(775).flags(FLAMMABLE).build();
 
-        SteamCrackedPropene = new Material.Builder(1555, "steamcracked_propene")
+        SteamCrackedPropene = new Material.Builder(1555, "steamcracked_propylene")
                 .fluid(FluidTypes.GAS).color(0xBEA540)
                 .fluidTemp(775).flags(FLAMMABLE).build();
 
@@ -192,7 +191,7 @@ public class UnknownCompositionMaterials {
                 .fluid(FluidTypes.GAS).color(0x852C18)
                 .fluidTemp(775).flags(FLAMMABLE).build();
 
-        SteamCrackedButene = new Material.Builder(1558, "steamcracked_butene")
+        SteamCrackedButene = new Material.Builder(1558, "steamcracked_butylene")
                 .fluid(FluidTypes.GAS).color(0x993E05)
                 .fluidTemp(775).flags(FLAMMABLE).build();
 
@@ -288,7 +287,8 @@ public class UnknownCompositionMaterials {
         RareEarth = new Material.Builder(1598, "rare_earth")
                 .dust(0)
                 .color(0x808064).iconSet(FINE)
-                .build();
+                .build()
+                .setFormula("RE", true);
 
         Stone = new Material.Builder(1599, "stone")
                 .dust(2)
@@ -304,7 +304,8 @@ public class UnknownCompositionMaterials {
                 .color(0xFFFF00).iconSet(SHINY)
                 .flags(NO_SMASHING, GENERATE_PLATE, EXCLUDE_PLATE_COMPRESSOR_RECIPE, EXCLUDE_BLOCK_CRAFTING_BY_HAND_RECIPES)
                 .fluidTemp(500)
-                .build();
+                .build()
+                .setFormula("Zn3(VO4)2", true);
 
         NetherStar = new Material.Builder(1602, "nether_star")
                 .gem(4)

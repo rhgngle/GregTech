@@ -134,15 +134,6 @@ public class ReactorRecipes {
                 .duration(60).EUt(VA[LV]).buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .input(dust, Iron)
-                .fluidInputs(HydrochloricAcid.getFluid(3000))
-                .circuitMeta(1)
-                .fluidOutputs(Iron3Chloride.getFluid(1000))
-                .fluidOutputs(Hydrogen.getFluid(3000))
-                .duration(400).EUt(VA[LV])
-                .buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
                 .circuitMeta(3)
                 .fluidInputs(Chlorine.getFluid(2000))
                 .fluidInputs(Methane.getFluid(1000))
@@ -337,14 +328,6 @@ public class ReactorRecipes {
                 .fluidInputs(Hydrogen.getFluid(4000))
                 .fluidOutputs(AceticAcid.getFluid(1000))
                 .duration(480).EUt(VA[LV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .input(dust, Aluminium, 4)
-                .fluidInputs(IndiumConcentrate.getFluid(1000))
-                .output(dustSmall, Indium)
-                .output(dust, AluminiumSulfite, 4)
-                .fluidOutputs(LeadZincSolution.getFluid(1000))
-                .duration(50).EUt(600).buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .circuitMeta(3)

@@ -27,7 +27,7 @@ public class PetrochemRecipes {
         lightlyCrack(RefineryGas, LightlyHydroCrackedGas, LightlySteamCrackedGas);
         severelyCrack(RefineryGas, SeverelyHydroCrackedGas, SeverelySteamCrackedGas);
 
-        DISTILLATION_RECIPES.recipeBuilder()
+        CRUDE_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(Oil.getFluid(50))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(15))
                 .fluidOutputs(SulfuricLightFuel.getFluid(50))
@@ -35,7 +35,7 @@ public class PetrochemRecipes {
                 .fluidOutputs(SulfuricGas.getFluid(60))
                 .duration(20).EUt(96).buildAndRegister();
 
-        DISTILLATION_RECIPES.recipeBuilder()
+        CRUDE_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(OilLight.getFluid(150))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(10))
                 .fluidOutputs(SulfuricLightFuel.getFluid(20))
@@ -43,7 +43,7 @@ public class PetrochemRecipes {
                 .fluidOutputs(SulfuricGas.getFluid(240))
                 .duration(20).EUt(96).buildAndRegister();
 
-        DISTILLATION_RECIPES.recipeBuilder()
+        CRUDE_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(OilHeavy.getFluid(100))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(250))
                 .fluidOutputs(SulfuricLightFuel.getFluid(45))
@@ -51,12 +51,44 @@ public class PetrochemRecipes {
                 .fluidOutputs(SulfuricGas.getFluid(60))
                 .duration(20).EUt(288).buildAndRegister();
 
-        DISTILLATION_RECIPES.recipeBuilder()
+        CRUDE_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(RawOil.getFluid(100))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(15))
                 .fluidOutputs(SulfuricLightFuel.getFluid(50))
                 .fluidOutputs(SulfuricNaphtha.getFluid(20))
                 .fluidOutputs(SulfuricGas.getFluid(60))
+                .duration(20).EUt(96).buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(desaltedOil.getFluid(25))
+                .fluidOutputs(SulfuricHeavyFuel.getFluid(30))
+                .fluidOutputs(SulfuricLightFuel.getFluid(100))
+                .fluidOutputs(SulfuricNaphtha.getFluid(40))
+                .fluidOutputs(SulfuricGas.getFluid(120))
+                .duration(20).EUt(96).buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(desaltedLightOil.getFluid(75))
+                .fluidOutputs(SulfuricHeavyFuel.getFluid(20))
+                .fluidOutputs(SulfuricLightFuel.getFluid(40))
+                .fluidOutputs(SulfuricNaphtha.getFluid(60))
+                .fluidOutputs(SulfuricGas.getFluid(480))
+                .duration(20).EUt(96).buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(desaltedHeavyOil.getFluid(50))
+                .fluidOutputs(SulfuricHeavyFuel.getFluid(500))
+                .fluidOutputs(SulfuricLightFuel.getFluid(90))
+                .fluidOutputs(SulfuricNaphtha.getFluid(30))
+                .fluidOutputs(SulfuricGas.getFluid(120))
+                .duration(20).EUt(288).buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(desaltedRawOil.getFluid(50))
+                .fluidOutputs(SulfuricHeavyFuel.getFluid(30))
+                .fluidOutputs(SulfuricLightFuel.getFluid(100))
+                .fluidOutputs(SulfuricNaphtha.getFluid(40))
+                .fluidOutputs(SulfuricGas.getFluid(120))
                 .duration(20).EUt(96).buildAndRegister();
 
         desulfurizationRecipes();

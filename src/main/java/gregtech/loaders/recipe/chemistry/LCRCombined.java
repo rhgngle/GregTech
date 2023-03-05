@@ -35,8 +35,8 @@ public class LCRCombined {
                 .fluidInputs(Propene.getFluid(1000))
                 .fluidInputs(Benzene.getFluid(1000))
                 .fluidInputs(Oxygen.getFluid(1000))
-                .fluidInputs(PhosphoricAcid.getFluid(100))
-                .fluidOutputs(Phenol.getFluid(1000))
+                .notConsumable(PhosphoricAcid.getFluid(100))
+                .output(dust, Phenol, 8)
                 .fluidOutputs(Acetone.getFluid(1000))
                 .duration(480).EUt(VA[LV]).buildAndRegister();
 
@@ -45,9 +45,8 @@ public class LCRCombined {
                 .fluidInputs(Benzene.getFluid(1000))
                 .fluidInputs(Chlorine.getFluid(2000))
                 .fluidInputs(Water.getFluid(1000))
-                .fluidOutputs(Phenol.getFluid(1000))
-                .fluidOutputs(HydrochloricAcid.getFluid(1000))
-                .fluidOutputs(DilutedHydrochloricAcid.getFluid(1000))
+                .output(dust, Phenol, 8)
+                .fluidOutputs(HydrochloricAcid.getFluid(2000))
                 .duration(560).EUt(VA[LV]).buildAndRegister();
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
@@ -55,8 +54,8 @@ public class LCRCombined {
                 .fluidInputs(Benzene.getFluid(2000))
                 .fluidInputs(Chlorine.getFluid(4000))
                 .input(dust, SodiumHydroxide, 6)
+                .output(dust, Phenol, 8)
                 .output(dust, Salt, 4)
-                .fluidOutputs(Phenol.getFluid(2000))
                 .fluidOutputs(HydrochloricAcid.getFluid(2000))
                 .duration(1120).EUt(VA[LV]).buildAndRegister();
 

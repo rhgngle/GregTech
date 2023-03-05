@@ -227,7 +227,7 @@ public class AssemblerRecipeLoader {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder().duration(200).EUt(VA[UV])
-                .input(stick, SamariumMagnetic)
+                .input(stick, praseodymiumRheniumCarbide)
                 .input(wireFine, Tritanium, 16)
                 .circuitMeta(1)
                 .outputs(VOLTAGE_COIL_UV.getStackForm())

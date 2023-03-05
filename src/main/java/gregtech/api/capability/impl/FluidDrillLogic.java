@@ -83,7 +83,7 @@ public class FluidDrillLogic {
 
         if (metaTileEntity.fillTanks(new FluidStack(veinFluid, amount), true)) {
             metaTileEntity.fillTanks(new FluidStack(veinFluid, amount), false);
-            depleteVein();
+            //depleteVein();
         } else {
             isInventoryFull = true;
             setActive(false);

@@ -17,14 +17,13 @@ public class HigherDegreeMaterials {
         Electrotine = new Material.Builder(2507, "electrotine")
                 .dust().ore(5, 1, true)
                 .color(0x3CB4C8).iconSet(SHINY)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Redstone, 1, Electrum, 1)
                 .build();
 
         EnderEye = new Material.Builder(2508, "ender_eye")
                 .gem(1)
                 .color(0x66FF66)
-                .flags(NO_SMASHING, NO_SMELTING, DECOMPOSITION_BY_CENTRIFUGING)
+                .flags(NO_SMASHING, NO_SMELTING)
                 .build();
 
         Diatomite = new Material.Builder(2509, "diatomite")
@@ -56,7 +55,7 @@ public class HigherDegreeMaterials {
         Basalt = new Material.Builder(2512, "basalt")
                 .dust(1)
                 .color(0x3C3232).iconSet(ROUGH)
-                .flags(NO_SMASHING, DECOMPOSITION_BY_CENTRIFUGING)
+                .flags(NO_SMASHING)
                 .components(Olivine, 1, Calcite, 3, Flint, 8, DarkAsh, 4)
                 .build();
 
@@ -70,14 +69,13 @@ public class HigherDegreeMaterials {
         Redrock = new Material.Builder(2514, "redrock")
                 .dust(1)
                 .color(0xFF5032).iconSet(ROUGH)
-                .flags(NO_SMASHING, DECOMPOSITION_BY_CENTRIFUGING)
+                .flags(NO_SMASHING)
                 .components(Calcite, 2, Flint, 1)
                 .build();
 
         GarnetSand = new Material.Builder(2515, "garnet_sand")
                 .dust(1).ore()
                 .color(0xC86400).iconSet(SAND)
-                .flags(DECOMPOSITION_BY_CENTRIFUGING)
                 .components(Almandine, 1, Andradite, 1, Grossular, 1, Pyrope, 1, Spessartine, 1, Uvarovite, 1)
                 .build();
 
@@ -94,7 +92,7 @@ public class HigherDegreeMaterials {
         RedAlloy = new Material.Builder(2517, "red_alloy")
                 .ingot(0).fluid()
                 .color(0xC80000)
-                .flags(STD_METAL, GENERATE_FINE_WIRE, GENERATE_BOLT_SCREW, DISABLE_DECOMPOSITION)
+                .flags(STD_METAL, GENERATE_FINE_WIRE, GENERATE_BOLT_SCREW, GENERATE_SPRING)
                 .components(Copper, 1, Redstone, 4)
                 .cableProperties(GTValues.V[0], 1, 0)
                 .fluidTemp(1400)
@@ -110,7 +108,7 @@ public class HigherDegreeMaterials {
         HSSE = new Material.Builder(2519, "hsse")
                 .ingot(4).fluid()
                 .color(0x336600).iconSet(METALLIC)
-                .flags(EXT2_METAL, GENERATE_FRAME, GENERATE_RING)
+                .flags(EXT2_METAL, GENERATE_FRAME, GENERATE_RING, GENERATE_GEAR)
                 .components(HSSG, 6, Cobalt, 1, Manganese, 1, Silicon, 1)
                 .toolStats(ToolProperty.Builder.of(5.0F, 10.0F, 3072, 4)
                         .attackSpeed(0.3F).enchantability(33).build())
@@ -132,42 +130,39 @@ public class HigherDegreeMaterials {
         IridiumMetalResidue = new Material.Builder(2522, "iridium_metal_residue")
                 .dust()
                 .color(0x5C5D68).iconSet(METALLIC)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Iridium, 1, Chlorine, 3, PlatinumSludgeResidue, 1)
                 .build();
 
         Granite = new Material.Builder(2523, "granite")
                 .dust()
                 .color(0xCFA18C).iconSet(ROUGH)
-                .flags(DECOMPOSITION_BY_CENTRIFUGING)
                 .components(SiliconDioxide, 4, Redrock, 1)
                 .build();
 
         Brick = new Material.Builder(2524, "brick")
                 .dust()
                 .color(0x9B5643).iconSet(ROUGH)
-                .flags(EXCLUDE_BLOCK_CRAFTING_RECIPES, NO_SMELTING, DECOMPOSITION_BY_CENTRIFUGING)
+                .flags(EXCLUDE_BLOCK_CRAFTING_RECIPES, NO_SMELTING)
                 .components(Clay, 1)
                 .build();
 
         Fireclay = new Material.Builder(2525, "fireclay")
                 .dust()
                 .color(0xADA09B).iconSet(ROUGH)
-                .flags(DECOMPOSITION_BY_CENTRIFUGING, NO_SMELTING)
+                .flags(NO_SMELTING)
                 .components(Clay, 1, Brick, 1)
                 .build();
 
         Diorite = new Material.Builder(2526, "diorite")
                 .dust()
                 .iconSet(ROUGH)
-                .flags(DECOMPOSITION_BY_CENTRIFUGING)
                 .components(Mirabilite, 2, Clay, 7)
                 .build();
 
         BlueAlloy = new Material.Builder(2527, "blue_alloy")
                 .ingot().fluid()
                 .color(0x64B4FF).iconSet(DULL)
-                .flags(GENERATE_PLATE, GENERATE_BOLT_SCREW, DISABLE_DECOMPOSITION)
+                .flags(GENERATE_PLATE, GENERATE_BOLT_SCREW)
                 .components(Electrotine, 4, Silver, 1)
                 .cableProperties(GTValues.V[GTValues.HV], 2, 1)
                 .fluidTemp(1400)

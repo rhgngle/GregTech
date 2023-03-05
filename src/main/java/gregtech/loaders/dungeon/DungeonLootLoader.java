@@ -25,7 +25,6 @@ public class DungeonLootLoader {
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.ingot, Materials.Lead), 1, 6, 30);
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.ingot, Materials.Steel), 1, 6, 60);
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.ingot, Materials.Bronze), 1, 6, 60);
-            ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.ingot, Materials.Manganese), 1, 6, 60);
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.ingot, Materials.DamascusSteel), 1, 6, 10);
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.gem, Materials.Emerald), 1, 6, 20);
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.gem, Materials.Ruby), 1, 6, 20);
@@ -34,8 +33,6 @@ public class DungeonLootLoader {
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.gem, Materials.Olivine), 1, 6, 20);
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.gem, Materials.GarnetRed), 1, 6, 40);
             ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.gem, Materials.GarnetYellow), 1, 6, 40);
-            ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.dust, Materials.Neodymium), 1, 6, 40);
-            ChestGenHooks.addItem(LootTableList.CHESTS_SIMPLE_DUNGEON, OreDictUnifier.get(OrePrefix.dust, Materials.Chrome), 1, 3, 40);
 
             ChestGenHooks.addItem(LootTableList.CHESTS_DESERT_PYRAMID, OreDictUnifier.get(OrePrefix.ingot, Materials.Silver), 4, 16, 12);
             ChestGenHooks.addItem(LootTableList.CHESTS_DESERT_PYRAMID, OreDictUnifier.get(OrePrefix.ingot, Materials.Platinum), 2, 8, 4);
@@ -72,9 +69,6 @@ public class DungeonLootLoader {
             ChestGenHooks.addItem(LootTableList.CHESTS_ABANDONED_MINESHAFT, OreDictUnifier.get(OrePrefix.ingot, Materials.DamascusSteel), 3, 12, 1);
             ChestGenHooks.addItem(LootTableList.CHESTS_ABANDONED_MINESHAFT, OreDictUnifier.get(OrePrefix.ingot, Materials.DamascusSteel), 1, 4, 1);
 
-            ChestGenHooks.addItem(LootTableList.CHESTS_VILLAGE_BLACKSMITH, OreDictUnifier.get(OrePrefix.dust, Materials.Chrome), 1, 4, 6);
-            ChestGenHooks.addItem(LootTableList.CHESTS_VILLAGE_BLACKSMITH, OreDictUnifier.get(OrePrefix.dust, Materials.Neodymium), 2, 8, 6);
-            ChestGenHooks.addItem(LootTableList.CHESTS_VILLAGE_BLACKSMITH, OreDictUnifier.get(OrePrefix.ingot, Materials.Manganese), 2, 8, 12);
             ChestGenHooks.addItem(LootTableList.CHESTS_VILLAGE_BLACKSMITH, OreDictUnifier.get(OrePrefix.ingot, Materials.Steel), 4, 12, 12);
             ChestGenHooks.addItem(LootTableList.CHESTS_VILLAGE_BLACKSMITH, OreDictUnifier.get(OrePrefix.ingot, Materials.Bronze), 4, 12, 12);
             ChestGenHooks.addItem(LootTableList.CHESTS_VILLAGE_BLACKSMITH, OreDictUnifier.get(OrePrefix.ingot, Materials.Brass), 4, 12, 12);
@@ -83,9 +77,6 @@ public class DungeonLootLoader {
             ChestGenHooks.addItem(LootTableList.CHESTS_STRONGHOLD_CROSSING, OreDictUnifier.get(OrePrefix.ingot, Materials.DamascusSteel), 4, 8, 6);
             ChestGenHooks.addItem(LootTableList.CHESTS_STRONGHOLD_CROSSING, OreDictUnifier.get(OrePrefix.ingot, Materials.Steel), 8, 16, 12);
             ChestGenHooks.addItem(LootTableList.CHESTS_STRONGHOLD_CROSSING, OreDictUnifier.get(OrePrefix.ingot, Materials.Bronze), 8, 16, 12);
-            ChestGenHooks.addItem(LootTableList.CHESTS_STRONGHOLD_CROSSING, OreDictUnifier.get(OrePrefix.ingot, Materials.Manganese), 4, 8, 12);
-            ChestGenHooks.addItem(LootTableList.CHESTS_STRONGHOLD_CROSSING, OreDictUnifier.get(OrePrefix.dust, Materials.Neodymium), 4, 8, 6);
-            ChestGenHooks.addItem(LootTableList.CHESTS_STRONGHOLD_CROSSING, OreDictUnifier.get(OrePrefix.dust, Materials.Chrome), 2, 4, 6);
 
             ChestGenHooks.addItem(LootTableList.CHESTS_STRONGHOLD_CORRIDOR, OreDictUnifier.get(OrePrefix.ingot, Materials.DamascusSteel), 2, 8, 6);
             ChestGenHooks.addItem(LootTableList.CHESTS_STRONGHOLD_CORRIDOR, OreDictUnifier.get(OrePrefix.ingot, Materials.DamascusSteel), 3, 12, 6);

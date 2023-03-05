@@ -297,13 +297,6 @@ public class MachineRecipeLoader {
 //            .duration(72000).EUt(VA[HV]).buildAndRegister();
 
         RecipeMaps.MIXER_RECIPES.recipeBuilder()
-                .input(OrePrefix.crushedPurified, Materials.Sphalerite)
-                .input(OrePrefix.crushedPurified, Materials.Galena)
-                .fluidInputs(Materials.SulfuricAcid.getFluid(4000))
-                .fluidOutputs(Materials.IndiumConcentrate.getFluid(1000))
-                .duration(60).EUt(150).buildAndRegister();
-
-        RecipeMaps.MIXER_RECIPES.recipeBuilder()
                 .input(dust, Coal)
                 .fluidInputs(Concrete.getFluid(L))
                 .outputs(MetaBlocks.ASPHALT.getItemVariant(BlockAsphalt.BlockType.ASPHALT))

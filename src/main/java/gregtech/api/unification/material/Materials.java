@@ -1,5 +1,6 @@
 package gregtech.api.unification.material;
 
+import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.materials.*;
 
@@ -49,7 +50,7 @@ public class Materials {
         ElementMaterials.register();
 
         /*
-         * Ranges 250-999
+         * Ranges 250-999, 3000-3019
          */
         FirstDegreeMaterials.register();
 
@@ -64,7 +65,7 @@ public class Materials {
         UnknownCompositionMaterials.register();
 
         /*
-         * Ranges 2000-2499
+         * Ranges 2000-2499, 3020-3039
          */
         SecondDegreeMaterials.register();
 
@@ -72,6 +73,36 @@ public class Materials {
          * Ranges 2500-2999
          */
         HigherDegreeMaterials.register();
+
+        /*
+         * Ranges 27000-27999
+         */
+        GTPIOtherMaterials.register();
+
+        /*
+         * Ranges 28000-28999
+         */
+        GTPIOreprocMaterials.register();
+
+        /*
+         * Ranges 29000-29999
+         */
+        GTPINuclearMaterials.register();
+
+        /*
+         * Ranges 30000-30999
+         */
+        GTPIInorganicMaterials.register();
+
+        /*
+         * Ranges 31000-31999
+         */
+        GTPIOrganicMaterials.register();
+
+        /*
+         * Ranges 32000-32766
+         */
+        GTPICatalyticMaterials.register();
 
         /*
          * Register info for cyclical references
@@ -335,7 +366,6 @@ public class Materials {
     public static Material Sapphire;
     public static Material Scheelite;
     public static Material Sodalite;
-    public static Material AluminiumSulfite;
     public static Material Tantalite;
     public static Material Coke;
 
@@ -468,6 +498,20 @@ public class Materials {
     public static Material Pyrochlore;
 
     /**
+     * GCYM First Degree Materials 3000-3019
+     */
+    public static Material Stellite100;
+    public static Material WatertightSteel;
+    public static Material MaragingSteel300;
+    public static Material HastelloyC276;
+    public static Material HastelloyX;
+    public static Material Trinaquadalloy;
+    public static Material Zeron100;
+    public static Material TitaniumCarbide;
+    public static Material TantalumCarbide;
+    public static Material MolybdenumDisilicide;
+
+    /**
      * Organic chemistry
      */
     public static Material SiliconeRubber;
@@ -525,7 +569,6 @@ public class Materials {
     public static Material Toluene;
     public static Material DiphenylIsophtalate;
     public static Material PhthalicAcid;
-    public static Material Dimethylbenzene;
     public static Material Diaminobenzidine;
     public static Material Dichlorobenzidine;
     public static Material Nitrochlorobenzene;
@@ -564,7 +607,6 @@ public class Materials {
     public static Material Glue;
     public static Material Lubricant;
     public static Material McGuffium239;
-    public static Material IndiumConcentrate;
     public static Material SeedOil;
     public static Material DrillingFluid;
     public static Material ConstructionFoam;
@@ -720,7 +762,6 @@ public class Materials {
     public static Material NaquadahAlloy;
     public static Material SulfuricNickelSolution;
     public static Material SulfuricCopperSolution;
-    public static Material LeadZincSolution;
     public static Material NitrationMixture;
     public static Material DilutedSulfuricAcid;
     public static Material DilutedHydrochloricAcid;
@@ -735,6 +776,10 @@ public class Materials {
     public static Material SaltWater;
     public static Material Clay;
     public static Material Redstone;
+    public static Material HSLASteel;
+    public static Material TitaniumTungstenCarbide;
+    public static Material IncoloyMA956;
+
 
     /**
      * Third Degree Materials
@@ -763,4 +808,603 @@ public class Materials {
     public static Material BasalticMineralSand;
     public static Material HSSE;
     public static Material HSSS;
+
+    /**
+     * GTPI Other Materials
+     */
+    public static Material codeine;
+    public static Material diphenylamine;
+    public static Material phenothiazine;
+    public static Material promethazine;
+    public static Material ammoniumPerchlorate;
+    public static Material potassiumPerchlorate;
+    public static Material sodiumPerchlorate;
+    public static Material sodiumChlorate;
+    public static Material vanillylmandelicAcid;
+    public static Material vanilglycolicAcid;
+    public static Material vanillin;
+    public static Material cupricHydrogenArsenite;
+    public static Material sodiumCyanide;
+    public static Material thoriumDioxide;
+    public static Material sodiumMethoxide;
+    public static Material nitrophenol2;
+    public static Material nitrophenol4;
+    public static Material aminophenol;
+    public static Material paracetamol;
+    public static Material phenylaceticAcid;
+    public static Material phenylacetone;
+    public static Material formylImpostramine;
+    public static Material impostramineHydrochloride;
+    public static Material oxalicAcid;
+    public static Material hydroxyphenylethylpiperidine;
+    public static Material phenylethylpiperidone;
+    public static Material anilinophenylethylpiperidine;
+    public static Material greganyl;
+    public static Material cupricChloride;
+    public static Material phthalicAnhydride;
+    public static Material phthalimide;
+    public static Material potassiumPhthalimide;
+    public static Material glucose;
+    public static Material fructose;
+    public static Material levulinicAcid;
+    public static Material methylLevulinate;
+    public static Material methylChlorolevulinate;
+    public static Material aminolevulinicAcid;
+    public static Material sodiumFormate;
+    public static Material dinitrodimethylbenzene;
+    public static Material dimethylphenylenediamine;
+    public static Material dimethylbenzimidazole;
+    public static Material phosphorusPentachloride;
+    public static Material cobaltChloride;
+    public static Material sodiumNitrate;
+    public static Material sodiumNitrite;
+    public static Material zincSulfate;
+    public static Material cobalaminMixture;
+    public static Material cyanocobalamin;
+    public static Material cobalamin;
+    public static Material hydroxycobalamin;
+    public static Material corundum;
+    public static Material kelpDried;
+    public static Material fusedSilica;
+
+    /**
+     * GTPI OreProc Materials
+     */
+    public static Material kelpAsh;
+    public static Material kelpAshBrine;
+    public static Material iodideBrine;
+    public static Material cuprousIodide;
+    public static Material sodiumIodide;
+    public static Material sodiumIodate;
+    public static Material hydroiodicAcid;
+    public static Material trisodiumPhosphate;
+    public static Material aluminiumChloride;
+    public static Material redMud;
+    public static Material digestedBauxiteSolution;
+    public static Material aluminiumHydroxide;
+    public static Material alumina;
+    public static Material redMudPigIron;
+    public static Material redMudTailings;
+    public static Material scandiumRichConcentrate;
+    public static Material scandia;
+    public static Material scandiumFluoride;
+    public static Material scandalloy;
+    public static Material ferrochrome;
+    public static Material potassiumCarbonate;
+    public static Material potassiumChromate;
+    public static Material chromia;
+    public static Material potassiumSulfate;
+    public static Material fluorite;
+    public static Material fluorosilicicAcid;
+    public static Material fluoroaluminicAcid;
+    public static Material cryolite;
+    public static Material ammoniumFluoride;
+    public static Material ammoniumBifluoride;
+    public static Material potassiumFluoride;
+    public static Material vanadiumResidue;
+    public static Material sodiumMetavanadate;
+    public static Material vanadiumPentoxide;
+    public static Material oleum;
+    public static Material sodiumTungstate;
+    public static Material calciumHydroxide;
+    public static Material lithiumHydroxide;
+    public static Material tungstenTrioxide;
+    public static Material molybdeniteConcentrate;
+    public static Material ammoniumMolybdate;
+    public static Material goldDepletedMolybdenite;
+    public static Material sodiumDicyanoaurate;
+    public static Material goldDepletedMolybdeniteConcentrate;
+    public static Material organicMolybdenumSolution;
+    public static Material organicPerrhenateSolution;
+    public static Material ammoniumPerrhenate;
+    public static Material roastedCooperite;
+    public static Material nickelDepletedCooperite;
+    public static Material cooperiteSolution;
+    public static Material platinumDepletedCooperiteSolution;
+    public static Material silverRichResidue;
+    public static Material leadAlloyedSilverRichResidue;
+    public static Material leadSilverNitrates;
+    public static Material leadSilverOxides;
+    public static Material platinumGroupSludgeSolution;
+    public static Material goldDepletedPlatinumGroupSludgeSolution;
+    public static Material goldPlatinumDepletedPlatinumGroupSludgeSolution;
+    public static Material insolublePlatinumGroupResidue;
+    public static Material rhodiumDepletedInsolublePlatinumGroupResidue;
+    public static Material rhodiumRutheniumOsmiumDepletedInsolublePlatinumGroupResidue;
+    public static Material ammoniumHexachloroplatinate;
+    public static Material ammoniumHexachloropalladate;
+    public static Material tetraamminePalladiumChloride;
+    public static Material crudeRhodium;
+    public static Material sodiumHexachlororhodate;
+    public static Material sodiumRuthenatePerosmateSolution;
+    public static Material rutheniumOsmiumTetroxidesSolution;
+    public static Material chlororuthenicAcid;
+    public static Material ammoniumHexachlororuthenate;
+    public static Material impureOsmiumTetroxide;
+    public static Material sodiumOsmate;
+    public static Material tetraammineOsmylChloride;
+    public static Material chloroiridicAcid;
+    public static Material ammoniumHexachloroiridate;
+    public static Material ferrousChloride;
+    public static Material sodiumOxide;
+    public static Material sodiumPeroxide;
+    public static Material sodiumAcetate;
+    public static Material rhodiumChloride;
+    public static Material rhodiumPhosphate;
+    public static Material celestine;
+    public static Material strontiumSulfide;
+    public static Material witherite;
+    public static Material strontianite;
+    public static Material bariumOxide;
+    public static Material strontiumOxide;
+    public static Material bariumPeroxide;
+    public static Material crudeNickel;
+    public static Material nickelCarbonyl;
+    public static Material cobaltCarbonyl;
+    public static Material calciumMetasilicate;
+    public static Material monoammoniumPhosphate;
+    public static Material diammoniumPhosphate;
+    public static Material urea;
+    public static Material phosphorusTrichloride;
+    public static Material hydrobromicAcid;
+    public static Material zircon;
+    public static Material zircaloy;
+    public static Material mineralSand;
+    public static Material ironDepletedMineralSand;
+    public static Material ironGarnetDepletedMineralSand;
+    public static Material ironGarnetMonaziteDepletedMineralSand;
+    public static Material magnesiumHydroxide;
+    public static Material beryl;
+    public static Material berylliumSulfate;
+    public static Material aluminiumSulfate;
+    public static Material chromiumSulfate;
+    public static Material berylliumHydroxide;
+    public static Material ammoniumSulfate;
+    public static Material ammoniumTetrafluoroberyllate;
+    public static Material berylliumFluoride;
+    public static Material magnesiumFluoride;
+    public static Material sphaleriteConcentrate;
+    public static Material sphaleriteResidue;
+    public static Material galliumTrichloride;
+    public static Material germaniumTetrachloride;
+    public static Material indiumTrichloride;
+    public static Material germaniumDioxide;
+    public static Material lithiumPotassiumChloride;
+    public static Material boronTrioxide;
+    public static Material boronTrifluoride;
+    public static Material lithiumHydride;
+    public static Material lithiumTetrafluoroborate;
+    public static Material diborane;
+    public static Material semiconductorGradeBoron;
+    public static Material sodiumFluoride;
+    public static Material rareEarthThoriumHydroxides;
+    public static Material rareEarthThoriumNitratesSolution;
+    public static Material aqueousRareEarthsSolution;
+    public static Material organicMediumHeavyRareEarthsSolution;
+    public static Material aqueousLightRareEarthsSolution;
+    public static Material organicHeavyRareEarthsSolution;
+    public static Material aqueousMediumRareEarthsSolution;
+    public static Material aqueousHeavyRareEarthsSolution;
+    public static Material lanthanumNitrate;
+    public static Material ceriumNitrate;
+    public static Material praseodymiumNitrate;
+    public static Material neodymiumNitrate;
+    public static Material samariumNitrate;
+    public static Material europiumNitrate;
+    public static Material gadoliniumNitrate;
+    public static Material terbiumNitrate;
+    public static Material dysprosiumNitrate;
+    public static Material holmiumNitrate;
+    public static Material erbiumNitrate;
+    public static Material thuliumNitrate;
+    public static Material ytterbiumNitrate;
+    public static Material lutetiumNitrate;
+    public static Material yttriumNitrate;
+    public static Material lanthana;
+    public static Material ceria;
+    public static Material praseodymia;
+    public static Material neodymia;
+    public static Material samaria;
+    public static Material europia;
+    public static Material gadolinia;
+    public static Material terbia;
+    public static Material dysprosia;
+    public static Material holmia;
+    public static Material erbia;
+    public static Material thulia;
+    public static Material ytterbia;
+    public static Material lutetia;
+    public static Material yttria;
+    public static Material lanthanumFluoride;
+    public static Material ceriumFluoride;
+    public static Material praseodymiumFluoride;
+    public static Material neodymiumFluoride;
+    public static Material samariumFluoride;
+    public static Material europiumFluoride;
+    public static Material gadoliniumFluoride;
+    public static Material terbiumFluoride;
+    public static Material dysprosiumFluoride;
+    public static Material holmiumFluoride;
+    public static Material erbiumFluoride;
+    public static Material thuliumFluoride;
+    public static Material ytterbiumFluoride;
+    public static Material lutetiumFluoride;
+    public static Material yttriumFluoride;
+
+    /**
+     * GTPI Nuclear Materials
+     */
+    public static Material uraniniteConcentrate;
+    public static Material organicUranylConcentrate;
+    public static Material aqueousUraniniteWasteSolution;
+    public static Material carnotiteConcentrate;
+    public static Material aqueousCarnotiteWasteSolution;
+    public static Material potassiumOrthovanadate;
+    public static Material organicThoriumSolution;
+    public static Material thoriumNitrate;
+    public static Material sodiumUranylTricarbonate;
+    public static Material yellowcake;
+    public static Material radioactiveOreGases;
+    public static Material radioactiveOreNobleGases;
+    public static Material liquidRadioactiveOreNobleGases;
+    public static Material organicUranylNitrateSolution;
+    public static Material uraniumTrioxide;
+    public static Material uraniumDioxide;
+    public static Material uraniumTetrafluoride;
+    public static Material supercriticalUraniumHexafluoride;
+    public static Material highlyEnrichedUraniumHexafluoride;
+    public static Material depletedUraniumTetrafluoride;
+    public static Material highlyEnrichedUraniumTetrafluoride;
+    public static Material lowEnrichedUranylFluoride;
+    public static Material lowEnrichedUraniumDioxide;
+    public static Material highlyEnrichedUranylFluoride;
+    public static Material highlyEnrichedUraniumDioxide;
+    public static Material highlyEnrichedUranylNitrate;
+    public static Material thoriumTetrafluoride;
+    public static Material leuFuelUnsintered;
+    public static Material leuFuel;
+    public static Material heuFuelUncalcined;
+    public static Material heuFuelUnsintered;
+    public static Material heuFuelUncoated;
+    public static Material heuFuel;
+    public static Material moxNpFuelUncalcined;
+    public static Material moxNpFuelUnsintered;
+    public static Material moxNpFuelUncoated;
+    public static Material moxNpFuel;
+    public static Material moxPuFuelUncalcined;
+    public static Material moxPuFuelUnsintered;
+    public static Material moxPuFuelUncoated;
+    public static Material moxPuFuel;
+    public static Material uraniumFuelSpent;
+    public static Material neptuniumFuelSpent;
+    public static Material plutoniumFuelSpent;
+    public static Material voloxidatedSpentUraniumFuel;
+    public static Material volatileFissionProducts;
+    public static Material ammoniumMetavanadate;
+    public static Material spentUraniumFuelSolution;
+    public static Material organicPurexDecontaminatedSolution;
+    public static Material aqueousPurexHighActivityWasteSolution;
+    public static Material organicPurexNeptuniumDepletedSolution;
+    public static Material aqueousPurexNeptuniumSolution;
+    public static Material organicPurexNeptuniumTechnetiumDepletedSolution;
+    public static Material aqueousPurexTechnetiumSolution;
+    public static Material organicPurexUraniumSolution;
+    public static Material aqueousPurexPlutoniumSolution;
+    public static Material aqueousPurexNeptuniumProduct;
+    public static Material aqueousPurexReducedNeptuniumProduct;
+    public static Material neptuniumOxalate;
+    public static Material neptuniumDioxide;
+    public static Material neptuniumNitrate;
+    public static Material ammoniumPertechnetate;
+    public static Material pertechnetatePassivatedSteel;
+    public static Material aqueousPurexPlutoniumProduct;
+    public static Material plutoniumOxalate;
+    public static Material plutoniumDioxide;
+    public static Material plutoniumNitrate;
+    public static Material aqueousPurexUraniumProduct;
+
+    /**
+     * GTPI Inorganic Materials
+     */
+    public static Material sodiumPersulfateSolution;
+    public static Material ferricChlorideSolution;
+    public static Material advancedSolderingAlloy;
+    public static Material advancedLubricant;
+    public static Material unmagnetizedNeodymiumMagnet;
+    public static Material unmagnetizedSamariumCobaltMagnet;
+    public static Material praseodymiumRheniumCarbide;
+    public static Material unmagnetizedPraseodymiumRheniumCarbide;
+    public static Material bismuthStrontiumCalciumCuprate;
+    public static Material thalliumBariumCalciumCuprate;
+    public static Material impregnatedWoodChips;
+    public static Material cookedWoodChips;
+    public static Material woodPulp;
+    public static Material bleachedPaper;
+    public static Material nitrocellulose;
+    public static Material trinitrotoluene;
+    public static Material seawater;
+    public static Material magnesiumDepletedseawater;
+    public static Material magnesiumCalciumDepletedseawater;
+    public static Material pretreatedWater;
+    public static Material deionizedWater;
+    public static Material sterileWater;
+    public static Material ultraPureWater1;
+    public static Material ozone;
+    public static Material ozonatedWater;
+    public static Material ultraPureWater2;
+    public static Material ultraPureWater3;
+    public static Material ultraPureWater4;
+    public static Material potassiumSulfide;
+    public static Material calciumSulfide;
+    public static Material siliconCarbide;
+    public static Material yttriaStabilizedZirconia;
+    public static Material bismuthHydroxide;
+    public static Material bismuthTrioxide;
+    public static Material bismuthTitanate;
+    public static Material liquidNitrogen;
+    public static Material supercriticalSteam;
+    public static Material supercriticalCarbonDioxide;
+    public static Material hotSodiumPotassium;
+    public static Material lithiumTetrafluoroberyllate;
+    public static Material hotLithiumTetrafluoroberyllate;
+    public static Material mesylicAcid;
+    public static Material triflylFluoride;
+    public static Material triflicAcid;
+    public static Material lithiumNitride;
+    public static Material lithiumBistriflimide;
+    public static Material lithiumFluoride;
+    public static Material bistriflimidicAcid;
+    public static Material lithiumSulfate;
+    public static Material semiconductorGradeSilicon;
+    public static Material bufferedOxideEtch;
+    public static Material piranhaSolution;
+    public static Material bakelite;
+    public static Material birmabright;
+    public static Material udimet69420;
+    public static Material sicSicMatrixComposite;
+    public static Material tungstenTechnetium;
+    public static Material duralloy;
+    public static Material rheniumDiboride;
+    public static Material rheniumDiborideCoatedDuralloy;
+    public static Material regalohm62;
+
+
+    /**
+     * GTPI Organic Materials
+     */
+    public static Material tripropylene;
+    public static Material nonylphenol;
+    public static Material nonylphenolFormaldehydeResin;
+    public static Material ethoxylatedNonylphenolFormaldehydeResin;
+    public static Material desaltedOil;
+    public static Material desaltedHeavyOil;
+    public static Material desaltedRawOil;
+    public static Material desaltedLightOil;
+    public static Material oilDepletedBrine;
+    public static Material isobutane;
+    public static Material isobutylene;
+    public static Material dodecene;
+    public static Material dodecane;
+    public static Material isopropylAlcohol;
+    public static Material chloromethanesMixture;
+    public static Material dichloromethane;
+    public static Material carbonTetrachloride;
+    public static Material butanediol;
+    public static Material butyrolactone;
+    public static Material methylpyrrolidone;
+    public static Material zincChloride;
+    public static Material chlorohexane;
+    public static Material methylimidazole;
+    public static Material hexylmethylimidazoliumChloride;
+    public static Material potassiumHexafluorophosphate;
+    public static Material hexylmethylimidazoliumHexafluorophosphate;
+    public static Material octylmethylimidazoliumChloride;
+    public static Material octylmethylimidazoliumBistriflimide;
+    public static Material ethylhydroxycaproaldehyde;
+    public static Material ethylhexanol;
+    public static Material diethylhexylphosphoricAcid;
+    public static Material chlorooctane;
+    public static Material trioctylphosphine;
+    public static Material trioctylphosphineOxide;
+    public static Material tributyl_phosphate;
+    public static Material xyloseSolution;
+    public static Material lignin;
+    public static Material xylose;
+    public static Material furfural;
+    public static Material tetrahydrofurfurylAlcohol;
+    public static Material trioctylamine;
+    public static Material trioctylmethylammoniumChloride;
+    public static Material tridecylamine;
+    public static Material tridecylmethylammoniumChloride;
+    public static Material aliquat366Nitrate;
+    public static Material trioctylmethylammoniumHydroxide;
+    public static Material trioctylmethylammoniumDiethylhexylphosphate;
+    public static Material emulsionPolymerizationMixture;
+    public static Material polypropylene;
+    public static Material polymethylpentene;
+    public static Material polystyrene;
+    public static Material styreneDivinylbenzene;
+    public static Material polyvinylAlcohol;
+    public static Material caprylicAcid;
+    public static Material perfluorooctanoylFluoride;
+    public static Material perfluorooctanoicAcid;
+    public static Material hexafluoropropylene;
+    public static Material hexafluoropropyleneOxide;
+    public static Material perfluorofluorosulfonylacetylFluoride;
+    public static Material perfluorofluorosulfonylethoxypropoxypropanoylFluoride;
+    public static Material perfluoroethenyloxypropanyloxyethanesulfonylFluoride;
+    public static Material rawNafion;
+    public static Material nafion;
+    public static Material tetrachlorobutane;
+    public static Material dichlorobutadiene;
+    public static Material dimethoxybutadiene;
+    public static Material sulfurDichloride;
+    public static Material iodobutane;
+    public static Material tetrabutylammoniumIodide;
+    public static Material ethylenedioxythiophene;
+    public static Material ferricSulfate;
+    public static Material polyethylenedioxythiophenePolystyreneSulfonate;
+    public static Material highlyConductivePedotPssSolution;
+    public static Material iridiumDioxide;
+    public static Material highlyConductivePedotPssFilmOnIridiumDioxide;
+    public static Material resourcinol;
+    public static Material dinitroresourcinol;
+    public static Material diaminoresourcinol;
+    public static Material tetratertbutyldiaminoresourcinol;
+    public static Material orthoXylene;
+    public static Material Dimethylbenzene;
+    public static Material paraXylene;
+    public static Material bistrichloromethylbenzene;
+    public static Material terephthalicAcid;
+    public static Material terephthaloylChloride;
+    public static Material preZylon;
+    public static Material zylon;
+    public static Material ethylanthraquinone;
+    public static Material hydrogenPeroxide;
+    public static Material methylaminesMixture;
+    public static Material trimethylamine;
+    public static Material ethylaminesMixture;
+    public static Material ethylamine;
+    public static Material diethylamine;
+    public static Material triethylamine;
+    public static Material isopropylaminesMixture;
+    public static Material isopropylamine;
+    public static Material diisopropylamine;
+    public static Material triisopropylamine;
+    public static Material ethanolaminesMixture;
+    public static Material ethanolamine;
+    public static Material diethanolamine;
+    public static Material triethanolamine;
+    public static Material isopropanolaminesMixture;
+    public static Material isopropanolamine;
+    public static Material diisopropanolamine;
+    public static Material triisopropanolamine;
+    public static Material ethyleneOxide;
+    public static Material propyleneOxide;
+    public static Material dicyclopentadiene;
+    public static Material tetrahydrodicyclopentadiene;
+    public static Material adamantane;
+    public static Material alkylatedAdamantanes;
+    public static Material crudeAdvancedLubricant;
+    public static Material propionaldehyde;
+    public static Material propanol;
+    public static Material isobutyraldehyde;
+    public static Material butanol;
+    public static Material valeraldehyde;
+    public static Material pentanol;
+    public static Material pentene;
+    public static Material caproaldehyde;
+    public static Material hexanol;
+    public static Material hexene;
+    public static Material enanthaldehyde;
+    public static Material heptanol;
+    public static Material heptene;
+    public static Material caprylaldehyde;
+    public static Material octanol;
+    public static Material butyricAcid;
+    public static Material isobutyricAcid;
+    public static Material bromopropane;
+    public static Material ethyleneGlycol;
+    public static Material acetylene;
+    public static Material ethylbenzenesMixture;
+    public static Material diethylbenzene;
+    public static Material divinylbenzene;
+    public static Material acetylChloride;
+    public static Material dimethoxymethane;
+    public static Material zincBromide;
+    public static Material chloromethylMethylEther;
+    public static Material potassiumHydride;
+    public static Material methylpentene;
+    public static Material tetrapropylammoniumBromide;
+    public static Material tetrapropylammoniumHydroxide;
+    public static Material hydrogenLaurylSulfate;
+    public static Material sodiumLaurylSulfate;
+    public static Material sodiumBromide;
+    public static Material triethylaluminium;
+    public static Material ethylaluminiumDichloride;
+    public static Material trialkylaluminiumMixture;
+    public static Material fattyAlcoholsMixture;
+    public static Material decanol;
+    public static Material dodecanol;
+    public static Material methylchlorosilanesMixture;
+    public static Material methyltrichlorosilane;
+    public static Material trimethylchlorosilane;
+    public static Material tertbutanol;
+    public static Material tertbutylChloride;
+    public static Material tertbutyldimethylchlorosilane;
+    public static Material siliconTetrachloride;
+    public static Material tetraethylOrthosilicate;
+    public static Material hydrazine;
+    public static Material ascorbicAcid;
+    public static Material dehydroascorbicAcid;
+    public static Material phthalicAcid;
+    public static Material lauricAcid;
+
+    /**
+     * GTPI Catalytic Materials
+     */
+    public static Material activatedCarbon;
+    public static Material sodiumMetasilicate;
+    public static Material silicaGel;
+    public static Material activatedAlumina;
+    public static Material palladiumChloride;
+    public static Material uncalcinedPalladiumOnAlumina;
+    public static Material palladiumOnAlumina;
+    public static Material rutheniumChloride;
+    public static Material ceriumChloride;
+    public static Material rutheniumCeriumOxidesCoatedNickel;
+    public static Material titaniumButoxide;
+    public static Material titaniaSilicaTpaohSolution;
+    public static Material titaniumSilicalite;
+    public static Material bismuthChloride;
+    public static Material uncalcinedCopperBismuthOnSilica;
+    public static Material copperBismuthOnSilica;
+    public static Material palladiumOnCarbon;
+    public static Material magnesiumEthoxide;
+    public static Material zieglerNattaCatalyst;
+    public static Material polystyreneCationExchangeResin;
+    public static Material stannicChloride;
+    public static Material chloromethylatedPolystyrene;
+    public static Material polystyreneAnionExchangeResin;
+    public static Material chloromethylatedStyreneDivinylbenzene;
+    public static Material styreneDivinylbenzeneAnionExchangeResin;
+    public static Material phosphotungsticAcid;
+    public static Material cobaltAcetate;
+    public static Material manganeseNitrate;
+    public static Material manganeseCarbonate;
+    public static Material ammoniumNitrate;
+    public static Material manganeseAcetate;
+    public static Material cupricNitrate;
+    public static Material chromiumNitrate;
+    public static Material unpyrolyzedCuCrMnNaCatalyst;
+    public static Material uncalcinedCuCrMnNaCatalyst;
+    public static Material cuCrMnNaCatalyst;
+    public static Material nickelChloride;
+    public static Material uncalcinedNickelPalladiumOnSilica;
+    public static Material nickelPalladiumOnSilica;
+    public static Material boricAcid;
+    public static Material strontiumNitrate;
+    public static Material uncalcinedEuropiumDopedStrontiumBorate;
+    public static Material europiumDopedStrontiumBorate;
+
 }

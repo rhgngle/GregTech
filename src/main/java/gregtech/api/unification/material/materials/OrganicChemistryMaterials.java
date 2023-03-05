@@ -23,7 +23,6 @@ public class OrganicChemistryMaterials {
         Nitrobenzene = new Material.Builder(1001, "nitrobenzene")
                 .fluid(FluidTypes.GAS)
                 .color(0x704936)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 6, Hydrogen, 5, Nitrogen, 1, Oxygen, 2)
                 .build();
 
@@ -36,10 +35,10 @@ public class OrganicChemistryMaterials {
         RawStyreneButadieneRubber = new Material.Builder(1003, "raw_styrene_butadiene_rubber")
                 .dust()
                 .color(0x54403D).iconSet(SHINY)
-                .flags(DISABLE_DECOMPOSITION, FLAMMABLE)
+                .flags(FLAMMABLE)
                 .components(Carbon, 20, Hydrogen, 26)
                 .build()
-                .setFormula("(C4H6)3C8H8", true);
+                .setFormula("(C4H6)3(C8H8)", true);
 
         StyreneButadieneRubber = new Material.Builder(1004, "styrene_butadiene_rubber")
                 .polymer()
@@ -48,12 +47,11 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 20, Hydrogen, 26)
                 .fluidTemp(1000)
                 .build()
-                .setFormula("(C4H6)3C8H8", true);
+                .setFormula("(C4H6)3(C8H8)", true);
 
         PolyvinylAcetate = new Material.Builder(1005, "polyvinyl_acetate")
-                .fluid()
+                .polymer()
                 .color(0xFF9955)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 4, Hydrogen, 6, Oxygen, 2)
                 .build();
 
@@ -100,7 +98,7 @@ public class OrganicChemistryMaterials {
         Polydimethylsiloxane = new Material.Builder(1011, "polydimethylsiloxane")
                 .dust()
                 .color(0xF5F5F5)
-                .flags(DISABLE_DECOMPOSITION, FLAMMABLE)
+                .flags(FLAMMABLE)
                 .components(Carbon, 2, Hydrogen, 6, Oxygen, 1, Silicon, 1)
                 .build();
 
@@ -143,8 +141,7 @@ public class OrganicChemistryMaterials {
         Sugar = new Material.Builder(1017, "sugar")
                 .gem(1)
                 .color(0xFAFAFA).iconSet(FINE)
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Carbon, 6, Hydrogen, 12, Oxygen, 6)
+                .components(Carbon, 12, Hydrogen, 22, Oxygen, 11)
                 .build();
 
         Methane = new Material.Builder(1018, "methane")
@@ -174,21 +171,18 @@ public class OrganicChemistryMaterials {
         Cumene = new Material.Builder(1022, "cumene")
                 .fluid(FluidTypes.GAS)
                 .color(0x552200)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 9, Hydrogen, 12)
                 .build();
 
         Tetrafluoroethylene = new Material.Builder(1023, "tetrafluoroethylene")
                 .fluid(FluidTypes.GAS)
                 .color(0x7D7D7D)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Fluorine, 4)
                 .build();
 
         Chloromethane = new Material.Builder(1024, "chloromethane")
                 .fluid(FluidTypes.GAS)
                 .color(0xC82CA0)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 1, Hydrogen, 3, Chlorine, 1)
                 .build();
 
@@ -208,11 +202,10 @@ public class OrganicChemistryMaterials {
         Propane = new Material.Builder(1027, "propane")
                 .fluid(FluidTypes.GAS)
                 .color(0xFAE250)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 3, Hydrogen, 8)
                 .build();
 
-        Propene = new Material.Builder(1028, "propene")
+        Propene = new Material.Builder(1028, "propylene")
                 .fluid(FluidTypes.GAS)
                 .color(0xFFDD55)
                 .components(Carbon, 3, Hydrogen, 6)
@@ -224,66 +217,57 @@ public class OrganicChemistryMaterials {
                 .components(Carbon, 2, Hydrogen, 6)
                 .build();
 
-        Butene = new Material.Builder(1030, "butene")
+        Butene = new Material.Builder(1030, "butylene")
                 .fluid(FluidTypes.GAS)
                 .color(0xCF5005)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 4, Hydrogen, 8)
                 .build();
 
         Butane = new Material.Builder(1031, "butane")
                 .fluid(FluidTypes.GAS)
                 .color(0xB6371E)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 4, Hydrogen, 10)
                 .build();
 
-        DissolvedCalciumAcetate = new Material.Builder(1032, "dissolved_calcium_acetate")
+        DissolvedCalciumAcetate = new Material.Builder(1032, "calcium_acetate_solution")
                 .fluid()
                 .color(0xDCC8B4)
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Calcium, 1, Carbon, 4, Oxygen, 4, Hydrogen, 6, Water, 1)
-                .build();
+                .build()
+                .setFormula("(Ca(C2H3O2)2)(H2O)", true);
 
         VinylAcetate = new Material.Builder(1033, "vinyl_acetate")
                 .fluid()
                 .color(0xE1B380)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 4, Hydrogen, 6, Oxygen, 2)
                 .build();
 
         MethylAcetate = new Material.Builder(1034, "methyl_acetate")
                 .fluid()
                 .color(0xEEC6AF)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 3, Hydrogen, 6, Oxygen, 2)
                 .build();
 
         Ethenone = new Material.Builder(1035, "ethenone")
                 .fluid()
                 .color(0x141446)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Hydrogen, 2, Oxygen, 1)
                 .build();
 
         Tetranitromethane = new Material.Builder(1036, "tetranitromethane")
                 .fluid()
                 .color(0x0F2828)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 1, Nitrogen, 4, Oxygen, 8)
                 .build();
 
         Dimethylamine = new Material.Builder(1037, "dimethylamine")
                 .fluid(FluidTypes.GAS)
                 .color(0x554469)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Hydrogen, 7, Nitrogen, 1)
                 .build();
 
         Dimethylhydrazine = new Material.Builder(1038, "dimethylhydrazine")
                 .fluid()
                 .color(0x000055)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Hydrogen, 8, Nitrogen, 2)
                 .build();
 
@@ -296,77 +280,66 @@ public class OrganicChemistryMaterials {
         Dimethyldichlorosilane = new Material.Builder(1040, "dimethyldichlorosilane")
                 .fluid(FluidTypes.GAS)
                 .color(0x441650)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Hydrogen, 6, Chlorine, 2, Silicon, 1)
                 .build();
 
         Styrene = new Material.Builder(1041, "styrene")
                 .fluid()
                 .color(0xD2C8BE)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 8, Hydrogen, 8)
                 .build();
 
         Butadiene = new Material.Builder(1042, "butadiene")
                 .fluid(FluidTypes.GAS)
                 .color(0xB55A10)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 4, Hydrogen, 6)
                 .build();
 
         Dichlorobenzene = new Material.Builder(1043, "dichlorobenzene")
                 .fluid()
                 .color(0x004455)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 6, Hydrogen, 4, Chlorine, 2)
                 .build();
 
         AceticAcid = new Material.Builder(1044, "acetic_acid")
                 .fluid(FluidTypes.ACID)
                 .color(0xC8B4A0)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Hydrogen, 4, Oxygen, 2)
                 .build();
 
         Phenol = new Material.Builder(1045, "phenol")
-                .fluid()
+                .fluid().dust()
                 .color(0x784421)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 6, Hydrogen, 6, Oxygen, 1)
                 .build();
 
         BisphenolA = new Material.Builder(1046, "bisphenol_a")
                 .fluid()
                 .color(0xD4AA00)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 15, Hydrogen, 16, Oxygen, 2)
                 .build();
 
         VinylChloride = new Material.Builder(1047, "vinyl_chloride")
                 .fluid(FluidTypes.GAS)
                 .color(0xE1F0F0)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Hydrogen, 3, Chlorine, 1)
                 .build();
 
         Ethylene = new Material.Builder(1048, "ethylene")
                 .fluid(FluidTypes.GAS)
                 .color(0xE1E1E1)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Hydrogen, 4)
                 .build();
 
         Benzene = new Material.Builder(1049, "benzene")
                 .fluid()
                 .color(0x1A1A1A)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 6, Hydrogen, 6)
                 .build();
 
         Acetone = new Material.Builder(1050, "acetone")
                 .fluid()
                 .color(0xAFAFAF)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 3, Hydrogen, 6, Oxygen, 1)
                 .build();
 
@@ -386,92 +359,69 @@ public class OrganicChemistryMaterials {
 
         Ethanol = new Material.Builder(1054, "ethanol")
                 .fluid()
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 2, Hydrogen, 6, Oxygen, 1)
                 .build();
 
         Toluene = new Material.Builder(1055, "toluene")
                 .fluid()
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 7, Hydrogen, 8)
                 .build();
 
         DiphenylIsophtalate = new Material.Builder(1056, "diphenyl_isophthalate")
-                .fluid()
+                .dust()
                 .color(0x246E57)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 20, Hydrogen, 14, Oxygen, 4)
                 .build();
 
-        PhthalicAcid = new Material.Builder(1057, "phthalic_acid")
-                .fluid(FluidTypes.ACID)
-                .color(0xD1D1D1)
-                .flags(DISABLE_DECOMPOSITION)
+        PhthalicAcid = new Material.Builder(1057, "isophthalic_acid")
+                .dust()
+                .color(0xD1D1D1).iconSet(DULL)
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
-                .build()
-                .setFormula("C6H4(CO2H)2", true);
-
-        Dimethylbenzene = new Material.Builder(1058, "dimethylbenzene")
-                .fluid()
-                .color(0x669C40)
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Carbon, 8, Hydrogen, 10)
-                .build()
-                .setFormula("C6H4(CH3)2", true);
+                .build();
 
         Diaminobenzidine = new Material.Builder(1059, "diaminobenzidine")
-                .fluid()
+                .dust()
                 .color(0x337D59)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 12, Hydrogen, 14, Nitrogen, 4)
-                .build()
-                .setFormula("(C6H3(NH2)2)2", true);
+                .build();
 
         Dichlorobenzidine = new Material.Builder(1060, "dichlorobenzidine")
-                .fluid()
+                .dust()
                 .color(0xA1DEA6)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 12, Hydrogen, 10, Chlorine, 2, Nitrogen, 2)
-                .build()
-                .setFormula("(C6H3Cl(NH2))2", true);
+                .build();
 
         Nitrochlorobenzene = new Material.Builder(1061, "nitrochlorobenzene")
-                .fluid()
-                .color(0x8FB51A)
-                .flags(DISABLE_DECOMPOSITION)
+                .dust()
+                .color(0x8FB51A).iconSet(DULL)
                 .components(Carbon, 6, Hydrogen, 4, Chlorine, 1, Nitrogen, 1, Oxygen, 2)
                 .build();
 
         Chlorobenzene = new Material.Builder(1062, "chlorobenzene")
                 .fluid()
                 .color(0x326A3E)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 6, Hydrogen, 5, Chlorine, 1)
                 .build();
 
-        Octane = new Material.Builder(1063, "octane")
+        Octane = new Material.Builder(1063, "isooctane")
                 .fluid()
-                .flags(DISABLE_DECOMPOSITION)
                 .color(0x8A0A09)
                 .components(Carbon, 8, Hydrogen, 18)
                 .build();
 
         EthylTertButylEther = new Material.Builder(1064, "ethyl_tertbutyl_ether")
                 .fluid()
-                .flags(DISABLE_DECOMPOSITION)
                 .color(0xB15C06)
                 .components(Carbon, 6, Hydrogen, 14, Oxygen, 1)
                 .build();
 
         Ethylbenzene = new Material.Builder(1066, "ethylbenzene")
                 .fluid()
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 8, Hydrogen, 10)
                 .build();
 
         Naphthalene = new Material.Builder(1067, "naphthalene")
-                .fluid()
-                .flags(DISABLE_DECOMPOSITION)
+                .fluid().dust()
                 .color(0xF4F4D7)
                 .components(Carbon, 10, Hydrogen, 8)
                 .build();
@@ -481,6 +431,7 @@ public class OrganicChemistryMaterials {
                 .color(0x000000).iconSet(SHINY)
                 .flags(GENERATE_GEAR, GENERATE_RING, GENERATE_FOIL, GENERATE_BOLT_SCREW)
                 .components(Carbon, 5, Hydrogen, 8)
+                .fluidPipeProperties(300, 20, true)
                 .fluidTemp(400)
                 .build();
 
@@ -499,32 +450,30 @@ public class OrganicChemistryMaterials {
 
         CyclohexanoneOxime = new Material.Builder(1071, "cyclohexanone_oxime")
                 .dust()
-                .flags(DISABLE_DECOMPOSITION, FLAMMABLE)
+                .flags(FLAMMABLE)
                 .color(0xEBEBF0).iconSet(ROUGH)
                 .components(Carbon, 6, Hydrogen, 11, Nitrogen, 1, Oxygen, 1)
-                .build()
-                .setFormula("C6H11NO", true);
+                .build();
 
         Caprolactam = new Material.Builder(1072, "caprolactam")
                 .dust()
-                .flags(DISABLE_DECOMPOSITION, FLAMMABLE)
+                .flags(FLAMMABLE)
                 .color(0x676768)
                 .components(Carbon, 6, Hydrogen, 11, Nitrogen, 1, Oxygen, 1)
-                .build()
-                .setFormula("(CH2)5C(O)NH", true);
+                .build();
 
         Butyraldehyde = new Material.Builder(1073, "butyraldehyde")
                 .fluid()
                 .color(0x554A3F)
-                .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 4, Hydrogen, 8, Oxygen, 1)
                 .build();
 
         PolyvinylButyral = new Material.Builder(1074, "polyvinyl_butyral")
                 .ingot().fluid()
                 .color(0x347D41)
-                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION, NO_SMASHING)
+                .flags(GENERATE_PLATE, NO_SMASHING)
                 .components(Butyraldehyde, 1, PolyvinylAcetate, 1)
                 .build();
+
     }
 }

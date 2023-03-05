@@ -148,6 +148,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ZERO_POINT_MODULE;
     public static MetaItem<?>.MetaValueItem ULTIMATE_BATTERY;
 
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_STEAM;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_LV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_MV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_HV;
@@ -162,6 +163,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_UXV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_OpV;
 
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_STEAM;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_LV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_MV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_HV;
@@ -176,6 +178,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_UXV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_OpV;
 
+    public static MetaItem<?>.MetaValueItem FLUID_REGULATOR_STEAM;
     public static MetaItem<?>.MetaValueItem FLUID_REGULATOR_LV;
     public static MetaItem<?>.MetaValueItem FLUID_REGULATOR_MV;
     public static MetaItem<?>.MetaValueItem FLUID_REGULATOR_HV;
@@ -189,6 +192,7 @@ public final class MetaItems {
 
     public static MetaItem<?>.MetaValueItem DYNAMITE;
 
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_STEAM;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_LV;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_MV;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_HV;
@@ -203,6 +207,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_UXV;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_OpV;
 
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_STEAM;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_LV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_MV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_HV;
@@ -217,6 +222,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_UXV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_OpV;
 
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_STEAM;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_LV;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_MV;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_HV;
@@ -278,14 +284,177 @@ public final class MetaItems {
 
     public static final Map<MarkerMaterial, MetaValueItem> GLASS_LENSES = new HashMap<>();
 
+    public static MetaItem<?>.MetaValueItem ENGRAVED_CRYSTAL_CHIP;
+    public static MetaItem<?>.MetaValueItem ENGRAVED_LAPOTRON_CHIP;
+
+    public static MetaItem<?>.MetaValueItem COMPONENT_GRINDER_DIAMOND;
+    public static MetaItem<?>.MetaValueItem COMPONENT_GRINDER_TUNGSTEN;
+    public static MetaItem<?>.MetaValueItem COMPONENT_GRINDER_SILICON_CARBIDE;
+
+    public static MetaItem<?>.MetaValueItem QUANTUM_EYE;
+    public static MetaItem<?>.MetaValueItem QUANTUM_STAR;
+    public static MetaItem<?>.MetaValueItem GRAVI_STAR;
+
+    public static MetaItem<?>.MetaValueItem ITEM_FILTER;
+    public static MetaItem<?>.MetaValueItem ORE_DICTIONARY_FILTER;
+    public static MetaItem<?>.MetaValueItem SMART_FILTER;
+
+    public static MetaItem<?>.MetaValueItem COVER_SHUTTER;
+    public static MetaItem<?>.MetaValueItem COVER_MACHINE_CONTROLLER;
+    public static MetaItem<?>.MetaValueItem COVER_FACADE;
+
+    public static MetaItem<?>.MetaValueItem COVER_ACTIVITY_DETECTOR;
+    public static MetaItem<?>.MetaValueItem COVER_ACTIVITY_DETECTOR_ADVANCED;
+    public static MetaItem<?>.MetaValueItem COVER_FLUID_DETECTOR;
+    public static MetaItem<?>.MetaValueItem COVER_FLUID_DETECTOR_ADVANCED;
+    public static MetaItem<?>.MetaValueItem COVER_ITEM_DETECTOR;
+    public static MetaItem<?>.MetaValueItem COVER_ITEM_DETECTOR_ADVANCED;
+    public static MetaItem<?>.MetaValueItem COVER_ENERGY_DETECTOR;
+    public static MetaItem<?>.MetaValueItem COVER_ENERGY_DETECTOR_ADVANCED;
+
+    public static MetaItem<?>.MetaValueItem COVER_SCREEN;
+    public static MetaItem<?>.MetaValueItem COVER_CRAFTING;
+    public static MetaItem<?>.MetaValueItem COVER_INFINITE_WATER;
+    public static MetaItem<?>.MetaValueItem COVER_ENDER_FLUID_LINK;
+    public static MetaItem<?>.MetaValueItem COVER_DIGITAL_INTERFACE;
+    public static MetaItem<?>.MetaValueItem COVER_DIGITAL_INTERFACE_WIRELESS;
+    public static MetaItem<?>.MetaValueItem COVER_FLUID_VOIDING;
+    public static MetaItem<?>.MetaValueItem COVER_FLUID_VOIDING_ADVANCED;
+    public static MetaItem<?>.MetaValueItem COVER_ITEM_VOIDING;
+    public static MetaItem<?>.MetaValueItem COVER_ITEM_VOIDING_ADVANCED;
+
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_ULV;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_LV;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_MV;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_HV;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_EV;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_IV;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_LUV;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_ZPM;
+    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_UV;
+
+
+    public static MetaItem<?>.MetaValueItem PLUGIN_TEXT;
+    public static MetaItem<?>.MetaValueItem PLUGIN_ONLINE_PIC;
+    public static MetaItem<?>.MetaValueItem PLUGIN_FAKE_GUI;
+    public static MetaItem<?>.MetaValueItem PLUGIN_ADVANCED_MONITOR;
+
+    public static MetaItem<?>.MetaValueItem INTEGRATED_CIRCUIT;
+
+    public static MetaItem<?>.MetaValueItem FOAM_SPRAYER;
+
+    public static MetaItem<?>.MetaValueItem GELLED_TOLUENE;
+
+    public static MetaItem<?>.MetaValueItem BOTTLE_PURPLE_DRINK;
+
+    public static MetaItem<?>.MetaValueItem PLANT_BALL;
+    public static MetaItem<?>.MetaValueItem STICKY_RESIN;
+    public static MetaItem<?>.MetaValueItem ENERGIUM_DUST;
+
+    public static MetaItem<?>.MetaValueItem POWER_UNIT_LV;
+    public static MetaItem<?>.MetaValueItem POWER_UNIT_MV;
+    public static MetaItem<?>.MetaValueItem POWER_UNIT_HV;
+    public static MetaItem<?>.MetaValueItem POWER_UNIT_EV;
+    public static MetaItem<?>.MetaValueItem POWER_UNIT_IV;
+
+    public static MetaItem<?>.MetaValueItem NANO_SABER;
+    public static MetaItem<?>.MetaValueItem PROSPECTOR_LV;
+    public static MetaItem<?>.MetaValueItem PROSPECTOR_HV;
+    public static MetaItem<?>.MetaValueItem PROSPECTOR_LUV;
+
+    public static MetaItem<?>.MetaValueItem TRICORDER_SCANNER;
+    public static MetaItem<?>.MetaValueItem DEBUG_SCANNER;
+
+    public static MetaItem<?>.MetaValueItem ITEM_MAGNET_LV;
+    public static MetaItem<?>.MetaValueItem ITEM_MAGNET_HV;
+
+    public static MetaItem<?>.MetaValueItem WIRELESS;
+    public static MetaItem<?>.MetaValueItem CAMERA;
+    public static MetaItem<?>.MetaValueItem TERMINAL;
+
+    public static final MetaItem<?>.MetaValueItem[] DYE_ONLY_ITEMS = new MetaItem.MetaValueItem[EnumDyeColor.values().length];
+    public static final MetaItem<?>.MetaValueItem[] SPRAY_CAN_DYES = new MetaItem.MetaValueItem[EnumDyeColor.values().length];
+
+    public static MetaItem<?>.MetaValueItem TURBINE_ROTOR;
+
+    public static MetaItem<?>.MetaValueItem ENERGY_MODULE;
+    public static MetaItem<?>.MetaValueItem ENERGY_CLUSTER;
+    public static MetaItem<?>.MetaValueItem NEURO_PROCESSOR;
+    public static MetaItem<?>.MetaValueItem STEM_CELLS;
+    public static MetaItem<?>.MetaValueItem UNCOATED_PETRI_DISH;
+    public static MetaItem<?>.MetaValueItem PETRI_DISH;
+
+    public static MetaItem<?>.MetaValueItem BIO_CHAFF;
+
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_ULV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_LV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_MV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_HV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_EV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_IV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_LuV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_ZPM;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_UV;
+
+    public static MetaItem<?>.MetaValueItem CLIPBOARD;
+
+    public static ArmorMetaItem<?>.ArmorMetaValueItem NIGHTVISION_GOGGLES;
+
+    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_CHESTPLATE;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_LEGGINGS;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_BOOTS;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_HELMET;
+
+    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_CHESTPLATE;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_LEGGINGS;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_BOOTS;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_HELMET;
+
+    public static ArmorMetaItem<?>.ArmorMetaValueItem SEMIFLUID_JETPACK;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem ELECTRIC_JETPACK;
+
+    public static ArmorMetaItem<?>.ArmorMetaValueItem ELECTRIC_JETPACK_ADVANCED;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_CHESTPLATE_ADVANCED;
+    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_CHESTPLATE_ADVANCED;
+
+    public static MetaItem<?>.MetaValueItem POWER_THRUSTER;
+    public static MetaItem<?>.MetaValueItem POWER_THRUSTER_ADVANCED;
+    public static MetaItem<?>.MetaValueItem GRAVITATION_ENGINE;
+
+    // Circuit Related
+    public static MetaItem<?>.MetaValueItem GERMANIUM_BOULE;
     public static MetaItem<?>.MetaValueItem SILICON_BOULE;
     public static MetaItem<?>.MetaValueItem GLOWSTONE_BOULE;
     public static MetaItem<?>.MetaValueItem NAQUADAH_BOULE;
     public static MetaItem<?>.MetaValueItem NEUTRONIUM_BOULE;
+
+    public static MetaItem<?>.MetaValueItem GERMANIUM_WAFER;
     public static MetaItem<?>.MetaValueItem SILICON_WAFER;
     public static MetaItem<?>.MetaValueItem GLOWSTONE_WAFER;
     public static MetaItem<?>.MetaValueItem NAQUADAH_WAFER;
     public static MetaItem<?>.MetaValueItem NEUTRONIUM_WAFER;
+
+    public static MetaItem<?>.MetaValueItem INTEGRATED_LOGIC_CIRCUIT_PHOTOMASK;
+    public static MetaItem<?>.MetaValueItem ULTRA_LOW_POWER_INTEGRATED_CIRCUIT_PHOTOMASK;
+    public static MetaItem<?>.MetaValueItem RANDOM_ACCESS_MEMORY_PHOTOMASK;
+    public static MetaItem<?>.MetaValueItem CENTRAL_PROCESSING_UNIT_PHOTOMASK;
+    public static MetaItem<?>.MetaValueItem LOW_POWER_INTRGRATED_CIRCUIT_PHOTOMASK;
+    public static MetaItem<?>.MetaValueItem SIMPLE_SYSTEM_ON_CHIP_PHOTOMASK;
+
+    public static MetaItem<?>.MetaValueItem INTEGRATED_LOGIC_CIRCUIT_UNETCHED;
+    public static MetaItem<?>.MetaValueItem ULTRA_LOW_POWER_INTEGRATED_CIRCUIT_UNETCHED;
+    public static MetaItem<?>.MetaValueItem RANDOM_ACCESS_MEMORY_UNETCHED;
+    public static MetaItem<?>.MetaValueItem CENTRAL_PROCESSING_UNIT_UNETCHED;
+    public static MetaItem<?>.MetaValueItem LOW_POWER_INTRGRATED_CIRCUIT_UNETCHED;
+    public static MetaItem<?>.MetaValueItem SIMPLE_SYSTEM_ON_CHIP_UNETCHED;
+
+    public static MetaItem<?>.MetaValueItem INTEGRATED_LOGIC_CIRCUIT_UNWASHED;
+    public static MetaItem<?>.MetaValueItem ULTRA_LOW_POWER_INTEGRATED_CIRCUIT_UNWASHED;
+    public static MetaItem<?>.MetaValueItem RANDOM_ACCESS_MEMORY_UNWASHED;
+    public static MetaItem<?>.MetaValueItem CENTRAL_PROCESSING_UNIT_UNWASHED;
+    public static MetaItem<?>.MetaValueItem LOW_POWER_INTRGRATED_CIRCUIT_UNWASHED;
+    public static MetaItem<?>.MetaValueItem SIMPLE_SYSTEM_ON_CHIP_UNWASHED;
 
     public static MetaItem<?>.MetaValueItem HIGHLY_ADVANCED_SOC_WAFER;
     public static MetaItem<?>.MetaValueItem ADVANCED_SYSTEM_ON_CHIP_WAFER;
@@ -303,9 +472,6 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem RANDOM_ACCESS_MEMORY_WAFER;
     public static MetaItem<?>.MetaValueItem SYSTEM_ON_CHIP_WAFER;
     public static MetaItem<?>.MetaValueItem SIMPLE_SYSTEM_ON_CHIP_WAFER;
-
-    public static MetaItem<?>.MetaValueItem ENGRAVED_CRYSTAL_CHIP;
-    public static MetaItem<?>.MetaValueItem ENGRAVED_LAPOTRON_CHIP;
 
     public static MetaItem<?>.MetaValueItem HIGHLY_ADVANCED_SOC;
     public static MetaItem<?>.MetaValueItem ADVANCED_SYSTEM_ON_CHIP;
@@ -406,144 +572,32 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem WETWARE_SUPER_COMPUTER_UV;
     public static MetaItem<?>.MetaValueItem WETWARE_MAINFRAME_UHV;
 
-    public static MetaItem<?>.MetaValueItem COMPONENT_GRINDER_DIAMOND;
-    public static MetaItem<?>.MetaValueItem COMPONENT_GRINDER_TUNGSTEN;
+    // Blueprints
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_LV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_MV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_HV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_EV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_IV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_LuV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_ZPM;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_UV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_UHV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_UEV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_UIV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_UXV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_OpV;
+    public static MetaItem<?>.MetaValueItem BLUEPRINT_MAX;
 
-    public static MetaItem<?>.MetaValueItem QUANTUM_EYE;
-    public static MetaItem<?>.MetaValueItem QUANTUM_STAR;
-    public static MetaItem<?>.MetaValueItem GRAVI_STAR;
-
-    public static MetaItem<?>.MetaValueItem ITEM_FILTER;
-    public static MetaItem<?>.MetaValueItem ORE_DICTIONARY_FILTER;
-    public static MetaItem<?>.MetaValueItem SMART_FILTER;
-
-    public static MetaItem<?>.MetaValueItem COVER_SHUTTER;
-    public static MetaItem<?>.MetaValueItem COVER_MACHINE_CONTROLLER;
-    public static MetaItem<?>.MetaValueItem COVER_FACADE;
-
-    public static MetaItem<?>.MetaValueItem COVER_ACTIVITY_DETECTOR;
-    public static MetaItem<?>.MetaValueItem COVER_ACTIVITY_DETECTOR_ADVANCED;
-    public static MetaItem<?>.MetaValueItem COVER_FLUID_DETECTOR;
-    public static MetaItem<?>.MetaValueItem COVER_FLUID_DETECTOR_ADVANCED;
-    public static MetaItem<?>.MetaValueItem COVER_ITEM_DETECTOR;
-    public static MetaItem<?>.MetaValueItem COVER_ITEM_DETECTOR_ADVANCED;
-    public static MetaItem<?>.MetaValueItem COVER_ENERGY_DETECTOR;
-    public static MetaItem<?>.MetaValueItem COVER_ENERGY_DETECTOR_ADVANCED;
-
-    public static MetaItem<?>.MetaValueItem COVER_SCREEN;
-    public static MetaItem<?>.MetaValueItem COVER_CRAFTING;
-    public static MetaItem<?>.MetaValueItem COVER_INFINITE_WATER;
-    public static MetaItem<?>.MetaValueItem COVER_ENDER_FLUID_LINK;
-    public static MetaItem<?>.MetaValueItem COVER_DIGITAL_INTERFACE;
-    public static MetaItem<?>.MetaValueItem COVER_DIGITAL_INTERFACE_WIRELESS;
-    public static MetaItem<?>.MetaValueItem COVER_FLUID_VOIDING;
-    public static MetaItem<?>.MetaValueItem COVER_FLUID_VOIDING_ADVANCED;
-    public static MetaItem<?>.MetaValueItem COVER_ITEM_VOIDING;
-    public static MetaItem<?>.MetaValueItem COVER_ITEM_VOIDING_ADVANCED;
-
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_ULV;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_LV;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_MV;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_HV;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_EV;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_IV;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_LUV;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_ZPM;
-    public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_UV;
-
-
-    public static MetaItem<?>.MetaValueItem PLUGIN_TEXT;
-    public static MetaItem<?>.MetaValueItem PLUGIN_ONLINE_PIC;
-    public static MetaItem<?>.MetaValueItem PLUGIN_FAKE_GUI;
-    public static MetaItem<?>.MetaValueItem PLUGIN_ADVANCED_MONITOR;
-
-    public static MetaItem<?>.MetaValueItem INTEGRATED_CIRCUIT;
-
-    public static MetaItem<?>.MetaValueItem FOAM_SPRAYER;
-
-    public static MetaItem<?>.MetaValueItem GELLED_TOLUENE;
-
-    public static MetaItem<?>.MetaValueItem BOTTLE_PURPLE_DRINK;
-
-    public static MetaItem<?>.MetaValueItem PLANT_BALL;
-    public static MetaItem<?>.MetaValueItem STICKY_RESIN;
-    public static MetaItem<?>.MetaValueItem ENERGIUM_DUST;
-
-    public static MetaItem<?>.MetaValueItem POWER_UNIT_LV;
-    public static MetaItem<?>.MetaValueItem POWER_UNIT_MV;
-    public static MetaItem<?>.MetaValueItem POWER_UNIT_HV;
-    public static MetaItem<?>.MetaValueItem POWER_UNIT_EV;
-    public static MetaItem<?>.MetaValueItem POWER_UNIT_IV;
-
-    public static MetaItem<?>.MetaValueItem NANO_SABER;
-    public static MetaItem<?>.MetaValueItem PROSPECTOR_LV;
-    public static MetaItem<?>.MetaValueItem PROSPECTOR_HV;
-    public static MetaItem<?>.MetaValueItem PROSPECTOR_LUV;
-
-    public static MetaItem<?>.MetaValueItem TRICORDER_SCANNER;
-    public static MetaItem<?>.MetaValueItem DEBUG_SCANNER;
-
-    public static MetaItem<?>.MetaValueItem ITEM_MAGNET_LV;
-    public static MetaItem<?>.MetaValueItem ITEM_MAGNET_HV;
-
-    public static MetaItem<?>.MetaValueItem WIRELESS;
-    public static MetaItem<?>.MetaValueItem CAMERA;
-    public static MetaItem<?>.MetaValueItem TERMINAL;
-
-    public static final MetaItem<?>.MetaValueItem[] DYE_ONLY_ITEMS = new MetaItem.MetaValueItem[EnumDyeColor.values().length];
-    public static final MetaItem<?>.MetaValueItem[] SPRAY_CAN_DYES = new MetaItem.MetaValueItem[EnumDyeColor.values().length];
-
-    public static MetaItem<?>.MetaValueItem TURBINE_ROTOR;
-
-    public static MetaItem<?>.MetaValueItem ENERGY_MODULE;
-    public static MetaItem<?>.MetaValueItem ENERGY_CLUSTER;
-    public static MetaItem<?>.MetaValueItem NEURO_PROCESSOR;
-    public static MetaItem<?>.MetaValueItem STEM_CELLS;
-    public static MetaItem<?>.MetaValueItem PETRI_DISH;
-
-    public static MetaItem<?>.MetaValueItem BIO_CHAFF;
-
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_ULV;
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_LV;
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_MV;
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_HV;
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_EV;
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_IV;
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_LuV;
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_ZPM;
-    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_UV;
-
-    public static MetaItem<?>.MetaValueItem CLIPBOARD;
-
-    public static ArmorMetaItem<?>.ArmorMetaValueItem NIGHTVISION_GOGGLES;
-
-    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_CHESTPLATE;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_LEGGINGS;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_BOOTS;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_HELMET;
-
-    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_CHESTPLATE;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_LEGGINGS;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_BOOTS;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_HELMET;
-
-    public static ArmorMetaItem<?>.ArmorMetaValueItem SEMIFLUID_JETPACK;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem ELECTRIC_JETPACK;
-
-    public static ArmorMetaItem<?>.ArmorMetaValueItem ELECTRIC_JETPACK_ADVANCED;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem NANO_CHESTPLATE_ADVANCED;
-    public static ArmorMetaItem<?>.ArmorMetaValueItem QUANTUM_CHESTPLATE_ADVANCED;
-
-    public static MetaItem<?>.MetaValueItem POWER_THRUSTER;
-    public static MetaItem<?>.MetaValueItem POWER_THRUSTER_ADVANCED;
-    public static MetaItem<?>.MetaValueItem GRAVITATION_ENGINE;
-
+    // Others
     public static MetaItem<?>.MetaValueItem SUS_RECORD;
     public static MetaItem<?>.MetaValueItem NAN_CERTIFICATE;
 
     public static MetaItem<?>.MetaValueItem FERTILIZER;
+    public static MetaItem<?>.MetaValueItem ELECTRONIC_BALLAST;
     public static MetaItem<?>.MetaValueItem BLACKLIGHT;
+    public static MetaItem<?>.MetaValueItem SONICATOR;
+    public static MetaItem<?>.MetaValueItem CAVITY_MAGNETRON;
+
 
 
     public static MetaOreDictItem CT_OREDICT_ITEM;
