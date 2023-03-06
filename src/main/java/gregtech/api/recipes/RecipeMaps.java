@@ -140,7 +140,7 @@ public class RecipeMaps {
      * </pre>
      */
     @ZenProperty
-    public static final RecipeMap<SimpleRecipeBuilder> AUTOCLAVE_RECIPES = new RecipeMap<>("autoclave", 0, 2, 0, 3, 0, 2, 0, 1, new SimpleRecipeBuilder(), false)
+    public static final RecipeMap<SimpleRecipeBuilder> AUTOCLAVE_RECIPES = new RecipeMap<>("autoclave", 0, 4, 0, 3, 0, 2, 0, 1, new SimpleRecipeBuilder(), false)
             .setSlotOverlay(false, false, GuiTextures.DUST_OVERLAY)
             .setSlotOverlay(true, false, GuiTextures.CRYSTAL_OVERLAY)
             .setProgressBar(GuiTextures.PROGRESS_BAR_CRYSTALLIZATION, MoveType.HORIZONTAL)
@@ -369,6 +369,7 @@ public class RecipeMaps {
                     // Don't call buildAndRegister as we are mutating the original recipe and already in the middle of a buildAndRegister call.
                     // Adding a second call will result in duplicate recipe generation attempts
                     recipeBuilder.fluidInputs(Materials.Tin.getFluid(Math.max(1, GTValues.L * ((CircuitAssemblerRecipeBuilder) recipeBuilder).getSolderMultiplier())));
+                    recipeBuilder.fluidInputs(Materials.advancedSolderingAlloy.getFluid(Math.max(1, (int) (GTValues.L * 0.5 * ((CircuitAssemblerRecipeBuilder) recipeBuilder).getSolderMultiplier()))));
                 }
             });
 
@@ -564,7 +565,7 @@ public class RecipeMaps {
      * </pre>
      */
     @ZenProperty
-    public static final RecipeMap<SimpleRecipeBuilder> ELECTROMAGNETIC_SEPARATOR_RECIPES = new RecipeMap<>("electromagnetic_separator", 1, 1, 1, 3, 0, 1, 0, 2, new SimpleRecipeBuilder(), false)
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTROMAGNETIC_SEPARATOR_RECIPES = new RecipeMap<>("electromagnetic_separator", 0, 1, 0, 3, 0, 1, 0, 2, new SimpleRecipeBuilder(), false)
             .setSlotOverlay(false, false, GuiTextures.CRUSHED_ORE_OVERLAY)
             .setSlotOverlay(true, false, GuiTextures.DUST_OVERLAY)
             .setProgressBar(GuiTextures.PROGRESS_BAR_MAGNET, MoveType.HORIZONTAL)
@@ -1090,6 +1091,8 @@ public class RecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> GAS_CENTRIFUGE_RECIPES = new RecipeMap<>("gas_centrifuge", 0, 0, 0, 0, 0, 1, 0, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> SOLVENT_EXTRACTION_RECIPES = new RecipeMap<>("solvent_extraction", 0, 3, 0, 0, 0, 4, 0, 4, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> S_ZORB_RECIPES = new RecipeMap<>("s_zorb_desulfurization", 0, 2, 0, 1, 0, 2, 0, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DISTILLATION_RECIPES = new RecipeMap<>("vacuum_distillation", 0, 0, 0, 1, 0, 1, 0, 12, new SimpleRecipeBuilder(), false);
 

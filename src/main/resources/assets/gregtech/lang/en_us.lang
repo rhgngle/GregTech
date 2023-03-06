@@ -2336,6 +2336,7 @@ material.aqueous_uraninite_waste_solution=Aqueous Uraninite Waste Solution
 material.carnotite_concentrate=Carnotite Concentrate
 material.aqueous_carnotite_waste_solution=Aqueous Carnotite Waste Solution
 material.potassium_orthovanadate=Potassium Orthovanadate
+material.thorite=Thorite
 material.organic_thorium_solution=Organic Thorium Solution
 material.thorium_nitrate=Thorium Nitrate
 material.sodium_uranyl_tricarbonate=Sodium Uranyl Tricarbonate
@@ -2387,6 +2388,7 @@ material.sodium_persulfate_solution=Sodium Persulfate Solution
 material.ferric_chloride_solution=Ferric Chloride Solution
 material.advanced_soldering_alloy=Advanced Soldering Alloy
 material.advanced_lubricant=Advanced Lubricant
+material.ferrofluid=Ferrofluid
 
 material.unmagnetized_neodymium=Unmagnetized Neodymium Magnet
 material.neodymium_magnetic=Neodymium Magnet
@@ -2458,7 +2460,8 @@ material.desalted_oil=Desalted Oil
 material.desalted_heavy_oil=Desalted Heavy Oil
 material.desalted_raw_oil=Desalted Raw Oil
 material.desalted_light_oil=Desalted Light Oil
-material.oil_deplted_brine=Oil Depleted Brine
+material.oil_depleted_brine=Oil Depleted Brine
+material.atmospheric_residue=Atmospheric Residue
 material.isobutane=Isobutane
 material.isobutylene=Isobutylene
 
@@ -2580,7 +2583,7 @@ material.propylene_oxide=Propylene Oxide
 material.dicyclopentadiene=Dicyclopentadiene
 material.tetrahydrodicyclopentadiene=Tetrahydrodicyclopentadiene
 material.adamantane=Adamantane
-material.alkylated_adamantanes=Alkylated Admantanes
+material.alkylated_adamantanes=Alkylated Adamantanes
 material.crude_advanced_lubricant=Crude Advanced Lubricant
 
 material.phosphorus_trichloride=Phosphorus Trichloride
@@ -2642,9 +2645,13 @@ material.lauric_acid=Lauric Acid
 
 # GTPI Catalytic Materials
 material.activated_carbon=Activated Carbon
+material.glassy_carbon=Glassy Carbon
 material.sodium_metasilicate=Sodium Metasilicate
 material.silica_gel=Silica Gel
 material.activated_alumina=Activated Alumina
+material.sodium_aluminate=Sodium Aluminate
+material.zsm_5=ZSM-5 Zeolite
+material.hzsm_5=HZSM-5 Zeolite
 material.palladium_chloride=Palladium Chloride
 material.uncalcined_palladium_on_alumina=Uncalcined Palladium on Alumina
 material.palladium_on_alumina=Palladium on Alumina
@@ -2684,6 +2691,13 @@ material.boric_acid=Boric Acid
 material.strontium_nitrate=Strontium Nitrate
 material.uncalcined_europium_doped_strontium_borate=Uncalcined Europium Doped Strontium Borate
 material.europium_doped_strontium_borate=Europium Doped Strontium Borate
+material.ruthenium_disulfide=Ruthenium Disulfide
+material.uncalcined_ruthenium_disulfide_on_alumina=Uncalcined Ruthenium Disulfide on Alumina
+material.ruthenium_disulfide_on_alumina=Ruthenium Disulfide on Alumina
+material.nickel_nitrate=Nickel Nitrate
+material.zinc_nitrate=Zinc Nitrate
+material.uncalcined_nickel_doped_zinc_oxide_on_hzsm_5=Uncalcined Nickel Doped Zinc Oxide on HZSM-5
+material.nickel_doped_zinc_oxide_on_hzsm_5=Nickel Doped Zinc Oxide on HZSM-5
 
 
 # Marker Material Tiers
@@ -2869,6 +2883,8 @@ item.polystyrene_anion_exchange_resin.dustTiny=Tiny Pile of Polystyrene Anion-Ex
 item.styrene_divinylbenzene_anion_exchange_resin.dust=Styrene-Divinylbenzene Anion-Exchange Resin
 item.styrene_divinylbenzene_anion_exchange_resin.dustSmall=Small Pile of Styrene-Divinylbenzene Anion-Exchange Resin
 item.styrene_divinylbenzene_anion_exchange_resin.dustTiny=Tiny Pile of Styrene-Divinylbenzene Anion-Exchange Resin
+item.glass.Stick=Glass Rod
+item.borosilicate_glass.Stick=Borosilicate Glass Rod
 
 recipemap.ore_washer.name=Ore Washer
 recipemap.thermal_centrifuge.name=Thermal Centrifuge
@@ -2904,7 +2920,7 @@ recipemap.implosion_compressor.name=Implosion Compressor
 recipemap.vacuum_freezer.name=Vacuum Freezer
 recipemap.chemical_reactor.name=Chemical Reactor
 recipemap.large_chemical_reactor.name=Large Chemical Reactor
-recipemap.distillation_tower.name=Distillation Tower
+recipemap.distillation_tower.name=Atmospheric Distillation
 recipemap.cracker.name=Oil Cracking Unit
 recipemap.pyrolyse_oven.name=Pyrolyse Oven
 recipemap.wiremill.name=Wiremill
@@ -2931,11 +2947,15 @@ recipemap.gas_collector.name=Gas Collector
 recipemap.rock_breaker.name=Rock Breaker
 recipemap.primitive_blast_furnace.name=Primitive Blast Furnace
 recipemap.coke_oven.name=Coke Oven
+
+recipemap.crude_distillation.name=Crude Distillation
 recipemap.crystallization.name=Crystallization
 recipemap.dryer.name=Dryer
 recipemap.filtration.name=High Pressure Filtration
 recipemap.gas_centrifuge.name=Gas Centrifuge
 recipemap.solvent_extraction.name=Solvent Extraction (SX)
+recipemap.s_zorb_desulfurization.name=S-Zorb Desulfurization
+recipemap.vacuum_distillation.name=Vacuum Distillation
 reciepmap.vapor_deposition.name=Vapor Deposition
 
 behaviour.hoe=Can till dirt

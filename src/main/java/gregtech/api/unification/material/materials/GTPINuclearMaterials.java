@@ -57,6 +57,13 @@ public class GTPINuclearMaterials {
                 .setFormula("K3VO4", true);
         counter++;
 
+        thorite = new Material.Builder(counter, "thorite")
+                .dust()
+                .color(0xd97a21).iconSet(ROUGH)
+                .build()
+                .setFormula("ThSiO4", true);
+        counter++;
+
         organicThoriumSolution = new Material.Builder(counter, "organic_thorium_solution")
                 .fluid()
                 .color(0xb8b78d)

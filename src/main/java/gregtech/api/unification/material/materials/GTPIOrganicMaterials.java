@@ -78,6 +78,12 @@ public class GTPIOrganicMaterials {
                 .setFormula("(H2O)", true);
         counter++;
 
+        atmosphericResidue = new Material.Builder(counter, "atmospheric_residue")
+                .fluid()
+                .color(0x383838).iconSet(DULL)
+                .build();
+        counter++;
+
         isobutane = new Material.Builder(counter, "isobutane")
                 .fluid(FluidTypes.GAS)
                 .color(0x423013)

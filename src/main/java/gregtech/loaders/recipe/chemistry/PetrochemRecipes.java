@@ -29,6 +29,7 @@ public class PetrochemRecipes {
 
         CRUDE_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(Oil.getFluid(50))
+                .fluidOutputs(atmosphericResidue.getFluid(50))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(15))
                 .fluidOutputs(SulfuricLightFuel.getFluid(50))
                 .fluidOutputs(SulfuricNaphtha.getFluid(20))
@@ -37,6 +38,7 @@ public class PetrochemRecipes {
 
         CRUDE_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(OilLight.getFluid(150))
+                .fluidOutputs(atmosphericResidue.getFluid(25))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(10))
                 .fluidOutputs(SulfuricLightFuel.getFluid(20))
                 .fluidOutputs(SulfuricNaphtha.getFluid(30))
@@ -45,6 +47,7 @@ public class PetrochemRecipes {
 
         CRUDE_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(OilHeavy.getFluid(100))
+                .fluidOutputs(atmosphericResidue.getFluid(200))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(250))
                 .fluidOutputs(SulfuricLightFuel.getFluid(45))
                 .fluidOutputs(SulfuricNaphtha.getFluid(15))
@@ -53,6 +56,7 @@ public class PetrochemRecipes {
 
         CRUDE_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(RawOil.getFluid(100))
+                .fluidOutputs(atmosphericResidue.getFluid(50))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(15))
                 .fluidOutputs(SulfuricLightFuel.getFluid(50))
                 .fluidOutputs(SulfuricNaphtha.getFluid(20))
@@ -61,6 +65,7 @@ public class PetrochemRecipes {
 
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(desaltedOil.getFluid(25))
+                .fluidOutputs(atmosphericResidue.getFluid(100))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(30))
                 .fluidOutputs(SulfuricLightFuel.getFluid(100))
                 .fluidOutputs(SulfuricNaphtha.getFluid(40))
@@ -69,6 +74,7 @@ public class PetrochemRecipes {
 
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(desaltedLightOil.getFluid(75))
+                .fluidOutputs(atmosphericResidue.getFluid(50))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(20))
                 .fluidOutputs(SulfuricLightFuel.getFluid(40))
                 .fluidOutputs(SulfuricNaphtha.getFluid(60))
@@ -77,6 +83,7 @@ public class PetrochemRecipes {
 
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(desaltedHeavyOil.getFluid(50))
+                .fluidOutputs(atmosphericResidue.getFluid(400))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(500))
                 .fluidOutputs(SulfuricLightFuel.getFluid(90))
                 .fluidOutputs(SulfuricNaphtha.getFluid(30))
@@ -85,6 +92,7 @@ public class PetrochemRecipes {
 
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(desaltedRawOil.getFluid(50))
+                .fluidOutputs(atmosphericResidue.getFluid(100))
                 .fluidOutputs(SulfuricHeavyFuel.getFluid(30))
                 .fluidOutputs(SulfuricLightFuel.getFluid(100))
                 .fluidOutputs(SulfuricNaphtha.getFluid(40))
@@ -101,27 +109,71 @@ public class PetrochemRecipes {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(SulfuricHeavyFuel.getFluid(8000))
                 .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, Molybdenite)
                 .fluidOutputs(HydrogenSulfide.getFluid(1000))
                 .fluidOutputs(HeavyFuel.getFluid(8000))
                 .duration(160).EUt(VA[LV]).buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(SulfuricHeavyFuel.getFluid(8000))
+                .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, rutheniumDisulfideOnAlumina)
+                .fluidOutputs(HydrogenSulfide.getFluid(1000))
+                .fluidOutputs(HeavyFuel.getFluid(8000))
+                .duration(8).EUt(VA[LV]).buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(SulfuricLightFuel.getFluid(12000))
                 .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, Molybdenite)
                 .fluidOutputs(HydrogenSulfide.getFluid(1000))
                 .fluidOutputs(LightFuel.getFluid(12000))
                 .duration(160).EUt(VA[LV]).buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(SulfuricLightFuel.getFluid(12000))
+                .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, rutheniumDisulfideOnAlumina)
+                .fluidOutputs(HydrogenSulfide.getFluid(1000))
+                .fluidOutputs(LightFuel.getFluid(12000))
+                .duration(8).EUt(VA[LV]).buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(SulfuricNaphtha.getFluid(12000))
                 .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, Molybdenite)
                 .fluidOutputs(HydrogenSulfide.getFluid(1000))
                 .fluidOutputs(Naphtha.getFluid(12000))
                 .duration(160).EUt(VA[LV]).buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(SulfuricNaphtha.getFluid(12000))
+                .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, rutheniumDisulfideOnAlumina)
+                .fluidOutputs(HydrogenSulfide.getFluid(1000))
+                .fluidOutputs(Naphtha.getFluid(12000))
+                .duration(8).EUt(VA[LV]).buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(SulfuricGas.getFluid(16000))
                 .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, Molybdenite)
+                .fluidOutputs(HydrogenSulfide.getFluid(1000))
+                .fluidOutputs(RefineryGas.getFluid(16000))
+                .duration(160).EUt(VA[LV]).buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(SulfuricGas.getFluid(16000))
+                .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, rutheniumDisulfideOnAlumina)
+                .fluidOutputs(HydrogenSulfide.getFluid(1000))
+                .fluidOutputs(RefineryGas.getFluid(16000))
+                .duration(8).EUt(VA[LV]).buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(NaturalGas.getFluid(16000))
+                .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, Molybdenite)
                 .fluidOutputs(HydrogenSulfide.getFluid(1000))
                 .fluidOutputs(RefineryGas.getFluid(16000))
                 .duration(160).EUt(VA[LV]).buildAndRegister();
@@ -129,9 +181,10 @@ public class PetrochemRecipes {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(NaturalGas.getFluid(16000))
                 .fluidInputs(Hydrogen.getFluid(2000))
+                .notConsumable(dust, rutheniumDisulfideOnAlumina)
                 .fluidOutputs(HydrogenSulfide.getFluid(1000))
                 .fluidOutputs(RefineryGas.getFluid(16000))
-                .duration(160).EUt(VA[LV]).buildAndRegister();
+                .duration(8).EUt(VA[LV]).buildAndRegister();
     }
 
     private static void distillationRecipes() {

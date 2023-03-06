@@ -20,7 +20,15 @@ public class GTPICatalyticMaterials {
         int counter = 32000;
         activatedCarbon = new Material.Builder(counter, "activated_carbon")
                 .dust()
-                .color(0x000000).iconSet(SHINY)
+                .color(0x000000).iconSet(ROUGH)
+                .build()
+                .setFormula("C", true);
+        counter++;
+
+        glassyCarbon = new Material.Builder(counter, "glassy_carbon")
+                .ingot()
+                .color(0x000000).iconSet(BRIGHT)
+                .flags(GENERATE_PLATE)
                 .build()
                 .setFormula("C", true);
         counter++;
@@ -44,6 +52,27 @@ public class GTPICatalyticMaterials {
                 .color(0xb2c7d1).iconSet(SHINY)
                 .build()
                 .setFormula("Al2O3", true);
+        counter++;
+
+        sodiumAluminate = new Material.Builder(counter, "sodium_aluminate")
+                .dust()
+                .color(0x8ca4ab).iconSet(ROUGH)
+                .build()
+                .setFormula("NaAlO2", true);
+        counter++;
+
+        ZSM5 = new Material.Builder(counter, "zsm_5")
+                .dust()
+                .color(0x6b6b6b).iconSet(ROUGH)
+                .build()
+                .setFormula("Na27Al27Si69O192", true);
+        counter++;
+
+        HZSM5 = new Material.Builder(counter, "hzsm_5")
+                .dust()
+                .color(0xb0b0b0).iconSet(ROUGH)
+                .build()
+                .setFormula("H27Al27Si69O192", true);
         counter++;
 
         palladiumChloride = new Material.Builder(counter, "palladium_chloride")
@@ -317,6 +346,55 @@ public class GTPICatalyticMaterials {
                 .color(0x542dad).iconSet(BRIGHT)
                 .build()
                 .setFormula("Eu(II):SrB4O7", true);
+        counter++;
+
+        uncalcinedRutheniumDisulfideOnAlumina = new Material.Builder(counter, "uncalcined_ruthenium_disulfide_on_alumina")
+                .dust()
+                .color(0xab324e).iconSet(ROUGH)
+                .build()
+                .setFormula("(RuS2)(Al2O3)", true);
+        counter++;
+
+        rutheniumDisulfideOnAlumina = new Material.Builder(counter, "ruthenium_disulfide_on_alumina")
+                .dust()
+                .color(0xab3877).iconSet(BRIGHT)
+                .build()
+                .setFormula("RuS2/Al2O3", true);
+        counter++;
+
+        rutheniumDisulfideCoatedGlassyCarbon = new Material.Builder(counter, "ruthenium_disulfide_coated_glassy_carbon")
+                .color(0xd91844).iconSet(BRIGHT)
+                .flags(GENERATE_PLATE)
+                .build()
+                .setFormula("RuS2/C", true);
+        counter++;
+
+        nickelNitrate = new Material.Builder(counter, "nickel_nitrate")
+                .dust()
+                .color(0x2bad2e).iconSet(ROUGH)
+                .build()
+                .setFormula("Ni(NO3)2", true);
+        counter++;
+
+        zincNitrate = new Material.Builder(counter, "zinc_nitrate")
+                .dust()
+                .color(0xb39e6b).iconSet(ROUGH)
+                .build()
+                .setFormula("Zn(NO3)2", true);
+        counter++;
+
+        uncalcinedNickelDopedZincOxideOnHZSM5 = new Material.Builder(counter, "uncalcined_nickel_doped_zinc_oxide_on_hzsm_5")
+                .dust()
+                .color(0xe3dab3).iconSet(ROUGH)
+                .build()
+                .setFormula("(Ni(NO3)2)(Zn(NO3)2)(HZSM-5)", true);
+        counter++;
+
+        nickelDopedZincOxideOnHZSM5 = new Material.Builder(counter, "nickel_doped_zinc_oxide_on_hzsm_5")
+                .dust()
+                .color(0xe0cb72).iconSet(BRIGHT)
+                .build()
+                .setFormula("Ni/ZnO-HZSM-5", true);
         counter++;
 
     }

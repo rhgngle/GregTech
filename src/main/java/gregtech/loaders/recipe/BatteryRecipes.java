@@ -348,6 +348,24 @@ public class BatteryRecipes {
                 .output(ENERGY_LAPOTRONIC_ORB_CLUSTER)
                 .buildAndRegister();
 
+        ASSEMBLY_LINE_RECIPES.recipeBuilder().EUt(80000).duration(1000)
+                .input(EXTREME_CIRCUIT_BOARD)
+                .input(plate, Europium, 8)
+                .input(circuit, Tier.LuV, 4)
+                .input(ENERGY_LAPOTRONIC_ORB)
+                .input(FIELD_GENERATOR_IV)
+                .input(HIGH_POWER_INTEGRATED_CIRCUIT, 16)
+                .input(ADVANCED_SMD_DIODE, 8)
+                .input(ADVANCED_SMD_CAPACITOR, 8)
+                .input(ADVANCED_SMD_RESISTOR, 8)
+                .input(ADVANCED_SMD_TRANSISTOR, 8)
+                .input(ADVANCED_SMD_INDUCTOR, 8)
+                .input(wireFine, Platinum, 64)
+                .input(bolt, Naquadah, 16)
+                .fluidInputs(advancedSolderingAlloy.getFluid(360))
+                .output(ENERGY_LAPOTRONIC_ORB_CLUSTER)
+                .buildAndRegister();
+
         // Energy Module
         ASSEMBLY_LINE_RECIPES.recipeBuilder().EUt(100000).duration(1200)
                 .input(ELITE_CIRCUIT_BOARD)
@@ -363,7 +381,7 @@ public class BatteryRecipes {
                 .input(ADVANCED_SMD_INDUCTOR, 12)
                 .input(wireFine, Ruridit, 64)
                 .input(bolt, Trinium, 16)
-                .fluidInputs(SolderingAlloy.getFluid(L * 10))
+                .fluidInputs(advancedSolderingAlloy.getFluid(L * 10))
                 .output(ENERGY_MODULE)
                 .buildAndRegister();
 
@@ -382,7 +400,7 @@ public class BatteryRecipes {
                 .input(ADVANCED_SMD_INDUCTOR, 16)
                 .input(wireFine, Osmiridium, 64)
                 .input(bolt, Naquadria, 16)
-                .fluidInputs(SolderingAlloy.getFluid(L * 20))
+                .fluidInputs(advancedSolderingAlloy.getFluid(L * 20))
                 .fluidInputs(Polybenzimidazole.getFluid(L * 4))
                 .output(ENERGY_CLUSTER)
                 .buildAndRegister();
@@ -402,7 +420,7 @@ public class BatteryRecipes {
                 .input(ADVANCED_SMD_INDUCTOR, 64)
                 .input(wireGtSingle, EnrichedNaquadahTriniumEuropiumDuranide, 64)
                 .input(bolt, Neutronium, 64)
-                .fluidInputs(SolderingAlloy.getFluid(L * 40))
+                .fluidInputs(advancedSolderingAlloy.getFluid(L * 40))
                 .fluidInputs(Polybenzimidazole.getFluid(2304))
                 .fluidInputs(Naquadria.getFluid(L * 18))
                 .output(ULTIMATE_BATTERY)

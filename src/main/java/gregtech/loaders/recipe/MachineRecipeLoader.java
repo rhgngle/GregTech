@@ -564,14 +564,18 @@ public class MachineRecipeLoader {
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().EUt(16).inputs(MetaBlocks.TURBINE_CASING.getItemVariant(TurbineCasingType.STEEL_TURBINE_CASING)).input(OrePrefix.plate, Materials.TungstenSteel, 6).circuitMeta(6).outputs(MetaBlocks.TURBINE_CASING.getItemVariant(TurbineCasingType.TUNGSTENSTEEL_TURBINE_CASING, 2)).duration(50).buildAndRegister();
 
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().EUt(48).input(OrePrefix.frameGt, Materials.Steel).input(OrePrefix.plate, Materials.Polyethylene, 6).fluidInputs(Concrete.getFluid(L)).outputs(MetaBlocks.CLEANROOM_CASING.getItemVariant(BlockCleanroomCasing.CasingType.PLASCRETE, 2)).duration(200).buildAndRegister();
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().EUt(48).input(OrePrefix.frameGt, Materials.Steel).input(OrePrefix.plate, Materials.polypropylene, 6).fluidInputs(Concrete.getFluid(L)).outputs(MetaBlocks.CLEANROOM_CASING.getItemVariant(BlockCleanroomCasing.CasingType.PLASCRETE, 4)).duration(200).buildAndRegister();
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().EUt(48).input(OrePrefix.frameGt, Materials.Steel).input(OrePrefix.plate, Materials.polymethylpentene, 6).fluidInputs(Concrete.getFluid(L)).outputs(MetaBlocks.CLEANROOM_CASING.getItemVariant(BlockCleanroomCasing.CasingType.PLASCRETE, 8)).duration(200).buildAndRegister();
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().EUt(48).input(OrePrefix.frameGt, Materials.Steel).input(OrePrefix.plate, Materials.Polyethylene, 6).fluidInputs(Glass.getFluid(L)).outputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.CLEANROOM_GLASS, 2)).duration(200).buildAndRegister();
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().EUt(48).input(OrePrefix.frameGt, Materials.Steel).input(OrePrefix.plate, Materials.polypropylene, 6).fluidInputs(Glass.getFluid(L)).outputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.CLEANROOM_GLASS, 4)).duration(200).buildAndRegister();
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().EUt(48).input(OrePrefix.frameGt, Materials.Steel).input(OrePrefix.plate, Materials.polymethylpentene, 6).fluidInputs(Glass.getFluid(L)).outputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.CLEANROOM_GLASS, 8)).duration(200).buildAndRegister();
 
         // If these recipes are changed, change the values in MaterialInfoLoader.java
 
-        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(25).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.ULV)).input(OrePrefix.cableGtSingle, Materials.RedAlloy, 2).fluidInputs(Materials.Polyethylene.getFluid(L * 2)).outputs(MetaTileEntities.HULL[0].getStackForm()).buildAndRegister();
-        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.LV)).input(OrePrefix.cableGtSingle, Materials.Tin, 2).fluidInputs(Materials.Polyethylene.getFluid(L * 2)).outputs(MetaTileEntities.HULL[1].getStackForm()).buildAndRegister();
-        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.MV)).input(OrePrefix.cableGtSingle, Materials.Copper, 2).fluidInputs(Materials.Polyethylene.getFluid(L * 2)).outputs(MetaTileEntities.HULL[2].getStackForm()).buildAndRegister();
-        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.MV)).input(OrePrefix.cableGtSingle, Materials.AnnealedCopper, 2).fluidInputs(Materials.Polyethylene.getFluid(L * 2)).outputs(MetaTileEntities.HULL[2].getStackForm()).buildAndRegister();
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(25).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.ULV)).input(OrePrefix.cableGtSingle, Materials.RedAlloy, 2).fluidInputs(Materials.Rubber.getFluid(L * 2)).outputs(MetaTileEntities.HULL[0].getStackForm()).buildAndRegister();
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.LV)).input(OrePrefix.cableGtSingle, Materials.Tin, 2).fluidInputs(Materials.Rubber.getFluid(L * 2)).outputs(MetaTileEntities.HULL[1].getStackForm()).buildAndRegister();
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.MV)).input(OrePrefix.cableGtSingle, Materials.Copper, 2).fluidInputs(Materials.Rubber.getFluid(L * 2)).outputs(MetaTileEntities.HULL[2].getStackForm()).buildAndRegister();
+        RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.MV)).input(OrePrefix.cableGtSingle, Materials.AnnealedCopper, 2).fluidInputs(Materials.Rubber.getFluid(L * 2)).outputs(MetaTileEntities.HULL[2].getStackForm()).buildAndRegister();
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.HV)).input(OrePrefix.cableGtSingle, Materials.Gold, 2).fluidInputs(Materials.Polyethylene.getFluid(L * 2)).outputs(MetaTileEntities.HULL[3].getStackForm()).buildAndRegister();
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.EV)).input(OrePrefix.cableGtSingle, Materials.Aluminium, 2).fluidInputs(Materials.Polyethylene.getFluid(L * 2)).outputs(MetaTileEntities.HULL[4].getStackForm()).buildAndRegister();
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder().duration(50).EUt(16).inputs(MetaBlocks.MACHINE_CASING.getItemVariant(MachineCasingType.IV)).input(OrePrefix.cableGtSingle, Materials.Platinum, 2).fluidInputs(Polytetrafluoroethylene.getFluid(L * 2)).outputs(MetaTileEntities.HULL[5].getStackForm()).buildAndRegister();
@@ -651,15 +655,6 @@ public class MachineRecipeLoader {
                 .fluidOutputs(CarbonDioxide.getFluid(2000))
                 .blastFurnaceTemp(1700)
                 .duration(1600).EUt(VA[HV]).buildAndRegister();
-
-        //Tempered Glass
-        BLAST_RECIPES.recipeBuilder()
-                .input(block, Glass)
-                .fluidInputs(Oxygen.getFluid(100))
-                .outputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(
-                        BlockGlassCasing.CasingType.TEMPERED_GLASS))
-                .blastFurnaceTemp(1000)
-                .duration(200).EUt(VA[MV]).buildAndRegister();
 
         registerBlastFurnaceMetallurgyRecipes();
     }

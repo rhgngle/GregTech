@@ -607,7 +607,7 @@ public class CircuitRecipes {
 
         // Basic Circuit Board
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(foil, Copper, 4)
+                .input(foil, Copper, 2)
                 .input(plate, Wood)
                 .fluidInputs(Glue.getFluid(100))
                 .output(BASIC_CIRCUIT_BOARD)
@@ -636,28 +636,28 @@ public class CircuitRecipes {
         // Plastic Board
         CHEMICAL_RECIPES.recipeBuilder().duration(500).EUt(10)
                 .input(plate, Polyethylene)
-                .input(foil, Copper, 4)
+                .input(foil, AnnealedCopper, 6)
                 .fluidInputs(SulfuricAcid.getFluid(250))
                 .output(PLASTIC_BOARD)
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder().duration(500).EUt(10)
                 .input(plate, PolyvinylChloride)
-                .input(foil, Copper, 4)
+                .input(foil, AnnealedCopper, 6)
                 .fluidInputs(SulfuricAcid.getFluid(250))
                 .output(PLASTIC_BOARD, 2)
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder().duration(500).EUt(10)
                 .input(plate, Polytetrafluoroethylene)
-                .input(foil, Copper, 4)
+                .input(foil, AnnealedCopper, 6)
                 .fluidInputs(SulfuricAcid.getFluid(250))
                 .output(PLASTIC_BOARD, 4)
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder().duration(500).EUt(10)
                 .input(plate, Polybenzimidazole)
-                .input(foil, Copper, 4)
+                .input(foil, AnnealedCopper, 6)
                 .fluidInputs(SulfuricAcid.getFluid(250))
                 .output(PLASTIC_BOARD, 8)
                 .buildAndRegister();
@@ -665,14 +665,14 @@ public class CircuitRecipes {
         // Plastic Circuit Board
         CHEMICAL_RECIPES.recipeBuilder().duration(600).EUt(VA[LV])
                 .input(PLASTIC_BOARD)
-                .input(foil, Copper, 6)
+                .input(foil, AnnealedCopper, 6)
                 .fluidInputs(sodiumPersulfateSolution.getFluid(500))
                 .output(PLASTIC_CIRCUIT_BOARD)
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder().duration(600).EUt(VA[LV])
                 .input(PLASTIC_BOARD)
-                .input(foil, Copper, 6)
+                .input(foil, AnnealedCopper, 6)
                 .fluidInputs(ferricChlorideSolution.getFluid(250))
                 .output(PLASTIC_CIRCUIT_BOARD)
                 .buildAndRegister();
@@ -680,7 +680,7 @@ public class CircuitRecipes {
         // Epoxy Board
         CHEMICAL_RECIPES.recipeBuilder().duration(600).EUt(VA[LV])
                 .input(plate, Epoxy)
-                .input(foil, Gold, 8)
+                .input(foil, Electrum, 8)
                 .fluidInputs(SulfuricAcid.getFluid(500))
                 .output(EPOXY_BOARD)
                 .buildAndRegister();
@@ -722,7 +722,7 @@ public class CircuitRecipes {
 
         CHEMICAL_RECIPES.recipeBuilder().duration(500).EUt(10)
                 .input(plate, ReinforcedEpoxyResin)
-                .input(foil, Platinum, 8)
+                .input(foil, Platinum, 12)
                 .fluidInputs(SulfuricAcid.getFluid(125))
                 .output(FIBER_BOARD)
                 .buildAndRegister();
@@ -747,7 +747,7 @@ public class CircuitRecipes {
         // Multi-Layer Fiber Reinforced Epoxy Board
         CHEMICAL_RECIPES.recipeBuilder().duration(500).EUt(VA[HV])
                 .input(FIBER_BOARD, 2)
-                .input(foil, Ruthenium, 8)
+                .input(foil, Ruthenium, 16)
                 .fluidInputs(SulfuricAcid.getFluid(500))
                 .output(MULTILAYER_FIBER_BOARD)
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -756,7 +756,7 @@ public class CircuitRecipes {
         // Elite Circuit Board
         CHEMICAL_RECIPES.recipeBuilder().duration(1500).EUt(VA[MV])
                 .input(MULTILAYER_FIBER_BOARD)
-                .input(foil, Ruthenium, 8)
+                .input(foil, Ruthenium, 16)
                 .fluidInputs(sodiumPersulfateSolution.getFluid(4000))
                 .output(ELITE_CIRCUIT_BOARD)
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -764,7 +764,7 @@ public class CircuitRecipes {
 
         CHEMICAL_RECIPES.recipeBuilder().duration(1500).EUt(VA[MV])
                 .input(MULTILAYER_FIBER_BOARD)
-                .input(foil, Ruthenium, 8)
+                .input(foil, Ruthenium, 16)
                 .fluidInputs(ferricChlorideSolution.getFluid(2000))
                 .output(ELITE_CIRCUIT_BOARD)
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -797,7 +797,7 @@ public class CircuitRecipes {
 
         CHEMICAL_RECIPES.recipeBuilder().duration(1800).EUt(VA[HV])
                 .input(WETWARE_BOARD)
-                .input(foil, NiobiumTitanium, 32)
+                .input(foil, NiobiumTitanium, 24)
                 .fluidInputs(sodiumPersulfateSolution.getFluid(8000))
                 .output(WETWARE_CIRCUIT_BOARD)
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -805,7 +805,7 @@ public class CircuitRecipes {
 
         CHEMICAL_RECIPES.recipeBuilder().duration(1800).EUt(VA[HV])
                 .input(WETWARE_BOARD)
-                .input(foil, NiobiumTitanium, 32)
+                .input(foil, NiobiumTitanium, 24)
                 .fluidInputs(ferricChlorideSolution.getFluid(4000))
                 .output(WETWARE_CIRCUIT_BOARD)
                 .cleanroom(CleanroomType.CLEANROOM)
@@ -1278,7 +1278,7 @@ public class CircuitRecipes {
                 .input(ADVANCED_SMD_INDUCTOR, 8)
                 .input(ADVANCED_SMD_CAPACITOR, 16)
                 .input(ADVANCED_SMD_DIODE, 8)
-                .fluidInputs(SolderingAlloy.getFluid(L * 10))
+                .fluidInputs(advancedSolderingAlloy.getFluid(L * 10))
                 .output(CRYSTAL_MAINFRAME_UV)
                 .buildAndRegister();
 
@@ -1342,7 +1342,7 @@ public class CircuitRecipes {
                 .input(wireFine, YttriumBariumCuprate, 24)
                 .input(foil, Polybenzimidazole, 32)
                 .input(plate, Europium, 4)
-                .fluidInputs(SolderingAlloy.getFluid(1152))
+                .fluidInputs(advancedSolderingAlloy.getFluid(1152))
                 .output(WETWARE_SUPER_COMPUTER_UV)
                 .buildAndRegister();
 
@@ -1359,7 +1359,7 @@ public class CircuitRecipes {
                 .input(RANDOM_ACCESS_MEMORY, 32)
                 .input(wireGtDouble, EnrichedNaquadahTriniumEuropiumDuranide, 16)
                 .input(plate, Europium, 8)
-                .fluidInputs(SolderingAlloy.getFluid(L * 20))
+                .fluidInputs(advancedSolderingAlloy.getFluid(L * 20))
                 .fluidInputs(Polybenzimidazole.getFluid(L * 8))
                 .output(WETWARE_MAINFRAME_UHV)
                 .EUt(300000).duration(2000).buildAndRegister();

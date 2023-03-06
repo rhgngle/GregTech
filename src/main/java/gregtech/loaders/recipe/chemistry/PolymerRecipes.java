@@ -34,36 +34,6 @@ public class PolymerRecipes {
                 .fluidOutputs(Ethylene.getFluid(2000))
                 .fluidOutputs(Oxygen.getFluid(5000))
                 .duration(400).EUt(200).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(1))
-                .fluidInputs(Air.getFluid(1000))
-                .fluidInputs(Ethylene.getFluid(144))
-                .fluidOutputs(Polyethylene.getFluid(144))
-                .duration(160).EUt(VA[LV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(1))
-                .fluidInputs(Oxygen.getFluid(1000))
-                .fluidInputs(Ethylene.getFluid(144))
-                .fluidOutputs(Polyethylene.getFluid(216))
-                .duration(160).EUt(VA[LV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(3))
-                .fluidInputs(Air.getFluid(7500))
-                .fluidInputs(Ethylene.getFluid(2160))
-                .fluidInputs(TitaniumTetrachloride.getFluid(100))
-                .fluidOutputs(Polyethylene.getFluid(3240))
-                .duration(800).EUt(VA[LV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(3))
-                .fluidInputs(Oxygen.getFluid(7500))
-                .fluidInputs(Ethylene.getFluid(2160))
-                .fluidInputs(TitaniumTetrachloride.getFluid(100))
-                .fluidOutputs(Polyethylene.getFluid(4320))
-                .duration(800).EUt(VA[LV]).buildAndRegister();
     }
 
     private static void polyvinylChlorideProcess() {
@@ -90,36 +60,6 @@ public class PolymerRecipes {
                 .fluidOutputs(VinylChloride.getFluid(1000))
                 .fluidOutputs(HydrochloricAcid.getFluid(3000))
                 .duration(160).EUt(VA[LV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(1))
-                .fluidInputs(Air.getFluid(1000))
-                .fluidInputs(VinylChloride.getFluid(144))
-                .fluidOutputs(PolyvinylChloride.getFluid(144))
-                .duration(160).EUt(VA[LV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(1))
-                .fluidInputs(Oxygen.getFluid(1000))
-                .fluidInputs(VinylChloride.getFluid(144))
-                .fluidOutputs(PolyvinylChloride.getFluid(216))
-                .duration(160).EUt(VA[LV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(2))
-                .fluidInputs(Air.getFluid(7500))
-                .fluidInputs(VinylChloride.getFluid(2160))
-                .fluidInputs(TitaniumTetrachloride.getFluid(100))
-                .fluidOutputs(PolyvinylChloride.getFluid(3240))
-                .duration(800).EUt(VA[LV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(2))
-                .fluidInputs(Oxygen.getFluid(7500))
-                .fluidInputs(VinylChloride.getFluid(2160))
-                .fluidInputs(TitaniumTetrachloride.getFluid(100))
-                .fluidOutputs(PolyvinylChloride.getFluid(4320))
-                .duration(800).EUt(VA[LV]).buildAndRegister();
     }
 
     private static void ptfeProcess() {
@@ -147,36 +87,6 @@ public class PolymerRecipes {
                 .fluidOutputs(Tetrafluoroethylene.getFluid(1000))
                 .fluidOutputs(HydrochloricAcid.getFluid(12000))
                 .duration(540).EUt(VA[IV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(1))
-                .fluidInputs(Air.getFluid(1000))
-                .fluidInputs(Tetrafluoroethylene.getFluid(144))
-                .fluidOutputs(Polytetrafluoroethylene.getFluid(144))
-                .duration(160).EUt(VA[LV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(1))
-                .fluidInputs(Oxygen.getFluid(1000))
-                .fluidInputs(Tetrafluoroethylene.getFluid(144))
-                .fluidOutputs(Polytetrafluoroethylene.getFluid(216))
-                .duration(160).EUt(VA[LV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(2))
-                .fluidInputs(Air.getFluid(7500))
-                .fluidInputs(Tetrafluoroethylene.getFluid(2160))
-                .fluidInputs(TitaniumTetrachloride.getFluid(100))
-                .fluidOutputs(Polytetrafluoroethylene.getFluid(3240))
-                .duration(800).EUt(VA[LV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(new IntCircuitIngredient(2))
-                .fluidInputs(Oxygen.getFluid(7500))
-                .fluidInputs(Tetrafluoroethylene.getFluid(2160))
-                .fluidInputs(TitaniumTetrachloride.getFluid(100))
-                .fluidOutputs(Polytetrafluoroethylene.getFluid(4320))
-                .duration(800).EUt(VA[LV]).buildAndRegister();
     }
 
     private static void epoxyProcess() {
@@ -345,20 +255,6 @@ public class PolymerRecipes {
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(Butadiene.getFluid(3000))
-                .fluidInputs(Styrene.getFluid(1000))
-                .fluidInputs(Air.getFluid(15000))
-                .output(dust, RawStyreneButadieneRubber, 27)
-                .duration(480).EUt(240).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(Butadiene.getFluid(3000))
-                .fluidInputs(Styrene.getFluid(1000))
-                .fluidInputs(Oxygen.getFluid(15000))
-                .output(dust, RawStyreneButadieneRubber, 41)
-                .duration(480).EUt(240).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, RawStyreneButadieneRubber, 9)
                 .input(dust, Sulfur)
                 .fluidOutputs(StyreneButadieneRubber.getFluid(1296))
@@ -500,6 +396,5 @@ public class PolymerRecipes {
                 .output(dust, Caprolactam, 19)
                 .fluidOutputs(Water.getFluid(1000))
                 .buildAndRegister();
-
     }
 }

@@ -1060,6 +1060,7 @@ public class Materials {
     public static Material carnotiteConcentrate;
     public static Material aqueousCarnotiteWasteSolution;
     public static Material potassiumOrthovanadate;
+    public static Material thorite;
     public static Material organicThoriumSolution;
     public static Material thoriumNitrate;
     public static Material sodiumUranylTricarbonate;
@@ -1130,6 +1131,7 @@ public class Materials {
     public static Material ferricChlorideSolution;
     public static Material advancedSolderingAlloy;
     public static Material advancedLubricant;
+    public static Material ferrofluid;
     public static Material unmagnetizedNeodymiumMagnet;
     public static Material unmagnetizedSamariumCobaltMagnet;
     public static Material praseodymiumRheniumCarbide;
@@ -1201,6 +1203,7 @@ public class Materials {
     public static Material desaltedRawOil;
     public static Material desaltedLightOil;
     public static Material oilDepletedBrine;
+    public static Material atmosphericResidue;
     public static Material isobutane;
     public static Material isobutylene;
     public static Material dodecene;
@@ -1364,9 +1367,13 @@ public class Materials {
      * GTPI Catalytic Materials
      */
     public static Material activatedCarbon;
+    public static Material glassyCarbon;
     public static Material sodiumMetasilicate;
     public static Material silicaGel;
     public static Material activatedAlumina;
+    public static Material sodiumAluminate;
+    public static Material ZSM5;
+    public static Material HZSM5;
     public static Material palladiumChloride;
     public static Material uncalcinedPalladiumOnAlumina;
     public static Material palladiumOnAlumina;
@@ -1406,5 +1413,13 @@ public class Materials {
     public static Material strontiumNitrate;
     public static Material uncalcinedEuropiumDopedStrontiumBorate;
     public static Material europiumDopedStrontiumBorate;
+    public static Material rutheniumDisulfide;
+    public static Material uncalcinedRutheniumDisulfideOnAlumina;
+    public static Material rutheniumDisulfideOnAlumina;
+    public static Material rutheniumDisulfideCoatedGlassyCarbon;
+    public static Material nickelNitrate;
+    public static Material zincNitrate;
+    public static Material uncalcinedNickelDopedZincOxideOnHZSM5;
+    public static Material nickelDopedZincOxideOnHZSM5;
 
 }

@@ -46,6 +46,12 @@ public class GTPIInorganicMaterials {
                 .build();
         counter++;
 
+        ferrofluid = new Material.Builder(counter, "ferrofluid")
+                .fluid()
+                .color(0x000000).iconSet(DULL)
+                .build();
+        counter++;
+
         // Magnetics Chain
         unmagnetizedNeodymiumMagnet = new Material.Builder(counter, "unmagnetized_neodymium")
                 .ingot()

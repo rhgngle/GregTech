@@ -329,6 +329,16 @@ public class MiscRecipeLoader {
                 .outputs(CAMERA.getStackForm())
                 .buildAndRegister();
 
+        ASSEMBLER_RECIPES.recipeBuilder().duration(100).EUt(VA[LV])
+                .input(ELECTRIC_PISTON_LV, 2)
+                .input(EMITTER_LV)
+                .input(lens, Glass)
+                .input(lens, Diamond)
+                .input(circuit, MarkerMaterials.Tier.LV, 4)
+                .fluidInputs(advancedSolderingAlloy.getFluid(L / 2))
+                .outputs(CAMERA.getStackForm())
+                .buildAndRegister();
+
         // Tempered Glass in Arc Furnace
         ARC_FURNACE_RECIPES.recipeBuilder().duration(60).EUt(VA[LV])
                 .input(block, Glass)
@@ -428,7 +438,7 @@ public class MiscRecipeLoader {
                 .duration(100).EUt(VA[LV]).buildAndRegister();
 
         FORMING_PRESS_RECIPES.recipeBuilder()
-                .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.TEMPERED_GLASS, 2))
+                .input(plate, BorosilicateGlass,  4)
                 .input(plate, PolyvinylButyral)
                 .outputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS))
                 .duration(200).EUt(VA[HV]).buildAndRegister();
@@ -451,5 +461,74 @@ public class MiscRecipeLoader {
                 .output(FIRECLAY_BRICK, 4)
                 .duration(300).EUt(2)
                 .buildAndRegister();
+
+        // Blacklight
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SMD_TRANSISTOR, 4)
+                .input(plate, polypropylene, 2)
+                .input(cableGtSingle, AnnealedCopper)
+                .input(circuit, MarkerMaterials.Tier.MV)
+                .fluidInputs(Concrete.getFluid(144))
+                .output(ELECTRONIC_BALLAST)
+                .duration(80).EUt(120)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, Titanium, 2)
+                .input(screw, Titanium, 2)
+                .input(wireFine, Platinum, 6)
+                .input(cableGtSingle, Aluminium)
+                .input(ELECTRONIC_BALLAST)
+                .input(circuit, MarkerMaterials.Tier.EV)
+                .input(block, fusedSilica)
+                .fluidInputs(Mercury.getFluid(1000))
+                .output(BLACKLIGHT)
+                .duration(120).EUt(1920)
+                .buildAndRegister();
+
+        // Sonicator
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(gemExquisite, bismuthTitanate)
+                .input(wireFine, Platinum, 4)
+                .input(stick, Ultimet)
+                .input(SENSOR_EV)
+                .input(EMITTER_EV)
+                .input(circuit, MarkerMaterials.Tier.EV)
+                .fluidInputs(polymethylpentene.getFluid(144))
+                .output(BLACKLIGHT)
+                .duration(120).EUt(1920)
+                .buildAndRegister();
+
+        // Cavity Magnetron
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(ingot, IronMagnetic, 2)
+                .input(stick, Glass, 2)
+                .input(wireFine, Cupronickel, 4)
+                .input(foil, Steel, 4)
+                .fluidInputs(Copper.getFluid(1296))
+                .output(CAVITY_MAGNETRON)
+                .duration(200).EUt(30)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(ingot, SteelMagnetic, 2)
+                .input(stick, Glass, 2)
+                .input(wireFine, Kanthal, 4)
+                .input(foil, StainlessSteel, 4)
+                .fluidInputs(Copper.getFluid(1296))
+                .output(CAVITY_MAGNETRON, 4)
+                .duration(150).EUt(30)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(ingot, NeodymiumMagnetic, 2)
+                .input(stick, BorosilicateGlass, 2)
+                .input(wireFine, regalohm62, 4)
+                .input(foil, TungstenSteel, 4)
+                .fluidInputs(Copper.getFluid(1296))
+                .output(CAVITY_MAGNETRON, 16)
+                .duration(100).EUt(30)
+                .buildAndRegister();
+
     }
 }

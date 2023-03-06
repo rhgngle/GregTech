@@ -22,7 +22,7 @@ public class SecondDegreeMaterials {
         Glass = new Material.Builder(2000, "glass")
                 .gem(0).fluid()
                 .color(0xFAFAFA).iconSet(GLASS)
-                .flags(GENERATE_LENS, NO_SMASHING, EXCLUDE_BLOCK_CRAFTING_RECIPES)
+                .flags(GENERATE_LENS, NO_SMASHING, EXCLUDE_BLOCK_CRAFTING_RECIPES, GENERATE_ROD)
                 .components(SiliconDioxide, 1)
                 .fluidTemp(1200)
                 .build();
@@ -291,7 +291,7 @@ public class SecondDegreeMaterials {
         BorosilicateGlass = new Material.Builder(2038, "borosilicate_glass")
                 .ingot(1).fluid()
                 .color(0xE6F3E6).iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_FINE_WIRE)
+                .flags(GENERATE_PLATE, GENERATE_FINE_WIRE, GENERATE_ROD)
                 .fluidTemp(1921)
                 .build()
                 .setFormula("(SiO2)(B2O3)", true);
