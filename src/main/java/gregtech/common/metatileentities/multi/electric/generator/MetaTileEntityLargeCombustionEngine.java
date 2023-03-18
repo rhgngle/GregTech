@@ -67,7 +67,7 @@ public class MetaTileEntityLargeCombustionEngine extends FuelMultiblockControlle
                 FluidStack advancedlubricantStack = getInputFluidInventory().drain(Materials.advancedLubricant.getFluid(Integer.MAX_VALUE), false);
                 FluidStack oxygenStack = getInputFluidInventory().drain(Materials.Oxygen.getFluid(Integer.MAX_VALUE), false);
                 FluidStack liquidOxygenStack = getInputFluidInventory().drain(Materials.LiquidOxygen.getFluid(Integer.MAX_VALUE), false);
-                int lubricantAmount = lubricantStack == null ? (advancedlubricantStack == null ? 0 : advancedlubricantStack.amount * 2) : lubricantStack.amount;
+                int lubricantAmount = (lubricantStack == null && advancedlubricantStack == null) ? 0 : (advancedlubricantStack.amount * 2 + lubricantStack.amount);
                 textList.add(new TextComponentTranslation("gregtech.multiblock.large_combustion_engine.lubricant_amount", lubricantAmount));
                 if (boostAllowed) {
                     if (!isExtreme) {
@@ -234,7 +234,7 @@ public class MetaTileEntityLargeCombustionEngine extends FuelMultiblockControlle
                         inputTank.drain(LUBRICANT_STACK, true);
                     } else {
                         if (ADVANCED_LUBRICANT_STACK.isFluidStackIdentical(inputTank.drain(ADVANCED_LUBRICANT_STACK, false))) {
-                            inputTank.drain(LUBRICANT_STACK, true);
+                            inputTank.drain(ADVANCED_LUBRICANT_STACK, true);
                         } else {
                             invalidate();
                             return;

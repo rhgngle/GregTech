@@ -28,7 +28,7 @@ public class ElementMaterials {
                 .fluidPipeProperties(900, 75, true)
                 .toolStats(ToolProperty.Builder.of(6.0F, 7.5F, 768, 2)
                         .enchantability(14).build())
-                .rotorStats(10.0f, 2.0f, 164)
+                .rotorStats(10.0f, 2.0f, 128)
                 .cableProperties(GTValues.V[4], 1, 1)
                 .fluidTemp(933)
                 .build();
@@ -893,7 +893,7 @@ public class ElementMaterials {
         Neutronium = new Material.Builder(127, "neutronium")
                 .ingot(6).fluid()
                 .color(0xFAFAFA)
-                .flags(EXT_METAL, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_LONG_ROD, GENERATE_SPRING, GENERATE_DENSE)
+                .flags(EXT_METAL, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_LONG_ROD, GENERATE_SPRING, GENERATE_DENSE, GENERATE_GEAR)
                 .element(Elements.Nt)
                 .toolStats(ToolProperty.Builder.of(180.0F, 100.0F, 65535, 6)
                         .attackSpeed(0.5F).enchantability(33).magnetic().unbreakable().build())

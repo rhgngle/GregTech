@@ -15,7 +15,9 @@ import com.google.common.base.Preconditions;
 import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.machines.BlockMachine;
-import gregtech.api.capability.*;
+import gregtech.api.capability.GregtechTileCapabilities;
+import gregtech.api.capability.IControllable;
+import gregtech.api.capability.IEnergyContainer;
 import gregtech.api.capability.impl.*;
 import gregtech.api.cover.CoverBehavior;
 import gregtech.api.cover.CoverDefinition;
@@ -97,7 +99,7 @@ public abstract class MetaTileEntity implements ICoverable, IVoidable {
 
     protected IFluidHandler fluidInventory;
 
-    protected final List<MTETrait> mteTraits = new ArrayList<>();
+    public final List<MTETrait> mteTraits = new ArrayList<>();
 
     protected EnumFacing frontFacing = EnumFacing.NORTH;
     private int paintingColor = -1;
@@ -305,7 +307,7 @@ public abstract class MetaTileEntity implements ICoverable, IVoidable {
      * @see gregtech.api.block.machines.MachineItemBlock#addCreativeTab(CreativeTabs) MachineItemBlock#addCreativeTab(CreativeTabs)
      */
     public boolean isInCreativeTab(CreativeTabs creativeTab) {
-        return creativeTab == CreativeTabs.SEARCH || creativeTab == GregTechAPI.TAB_GREGTECH;
+        return creativeTab == CreativeTabs.SEARCH || creativeTab == GregTechAPI.TAB_GREGTECH_MACHINES;
     }
 
     public String getItemSubTypeId(ItemStack itemStack) {
@@ -420,16 +422,24 @@ public abstract class MetaTileEntity implements ICoverable, IVoidable {
                 MetaTileEntityUIFactory.INSTANCE.openUI(getHolder(), (EntityPlayerMP) playerIn);
             }
             return true;
-        } else if (playerIn.isSneaking() && playerIn.getHeldItemMainhand().isEmpty()) {
+        } else {
             EnumFacing hitFacing = hitResult.sideHit;
-
             CoverBehavior coverBehavior = hitFacing == null ? null : getCoverAtSide(hitFacing);
+            if (coverBehavior == null) {
+                return false;
+            }
+            EnumActionResult result = coverBehavior.onRightClick(playerIn, hand, hitResult);
 
-            EnumActionResult coverResult = coverBehavior == null ? EnumActionResult.PASS :
-                    coverBehavior.onScrewdriverClick(playerIn, hand, hitResult);
+            if (result == EnumActionResult.SUCCESS) {
+                return true;
+            }
+            else if (playerIn.isSneaking() && playerIn.getHeldItemMainhand().isEmpty()) {
+                result = coverBehavior.onScrewdriverClick(playerIn, hand, hitResult);
 
-            return coverResult == EnumActionResult.SUCCESS;
+                return result == EnumActionResult.SUCCESS;
+            }
         }
+
         return false;
     }
 

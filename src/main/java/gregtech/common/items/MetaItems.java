@@ -322,6 +322,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem COVER_FLUID_VOIDING_ADVANCED;
     public static MetaItem<?>.MetaValueItem COVER_ITEM_VOIDING;
     public static MetaItem<?>.MetaValueItem COVER_ITEM_VOIDING_ADVANCED;
+    public static MetaItem<?>.MetaValueItem COVER_STORAGE;
 
     public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL;
     public static MetaItem<?>.MetaValueItem COVER_SOLAR_PANEL_ULV;
@@ -599,6 +600,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem CAVITY_MAGNETRON;
 
 
+    public static MetaItem<?>.MetaValueItem LOGO;
 
     public static MetaOreDictItem CT_OREDICT_ITEM;
 
