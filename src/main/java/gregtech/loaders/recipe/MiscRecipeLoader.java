@@ -35,7 +35,7 @@ public class MiscRecipeLoader {
 
         // Basic Terminal Recipe
         ModHandler.addShapedRecipe(true, "basic_terminal", TERMINAL.getStackForm(),
-                "SGS", "PBP", "PWP", 'S', new UnificationEntry(screw, WroughtIron), 'G', OreDictUnifier.get("paneGlass"), 'B', new ItemStack(Items.BOOK),
+                "SGS", "PBP", "PWP", 'S', new UnificationEntry(screw, WroughtIron), 'G', OreDictUnifier.get("plateGlass"), 'B', new ItemStack(Items.BOOK),
                                         'P', new UnificationEntry(plate, WroughtIron), 'W', new UnificationEntry(wireGtSingle, RedAlloy));
 
         // Potin Recipe
@@ -489,13 +489,13 @@ public class MiscRecipeLoader {
         // Sonicator
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(gemExquisite, bismuthTitanate)
-                .input(wireFine, Platinum, 4)
+                .input(wireFine, Palladium, 4)
                 .input(stick, Ultimet)
                 .input(SENSOR_EV)
                 .input(EMITTER_EV)
                 .input(circuit, MarkerMaterials.Tier.EV)
                 .fluidInputs(polymethylpentene.getFluid(144))
-                .output(BLACKLIGHT)
+                .output(SONICATOR)
                 .duration(120).EUt(1920)
                 .buildAndRegister();
 

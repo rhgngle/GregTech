@@ -331,14 +331,6 @@ public class ReactorRecipes {
                 .duration(160).EUt(VA[LV]).buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(2)
-                .fluidInputs(Ammonia.getFluid(1000))
-                .fluidInputs(Methanol.getFluid(2000))
-                .fluidOutputs(Water.getFluid(2000))
-                .fluidOutputs(Dimethylamine.getFluid(1000))
-                .duration(240).EUt(VA[MV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
                 .circuitMeta(1)
                 .fluidInputs(HydrochloricAcid.getFluid(1000))
                 .fluidInputs(Methanol.getFluid(1000))
@@ -392,21 +384,6 @@ public class ReactorRecipes {
                 .fluidOutputs(Hydrogen.getFluid(8000))
                 .fluidOutputs(CarbonDioxide.getFluid(1000))
                 .duration(150).EUt(VA[HV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(MethylAcetate.getFluid(2000))
-                .fluidInputs(NitricAcid.getFluid(4000))
-                .output(dust, Carbon, 5)
-                .fluidOutputs(Tetranitromethane.getFluid(1000))
-                .fluidOutputs(Water.getFluid(8000))
-                .duration(480).EUt(VA[MV]).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(NitricAcid.getFluid(8000))
-                .fluidInputs(Ethenone.getFluid(1000))
-                .fluidOutputs(Tetranitromethane.getFluid(2000))
-                .fluidOutputs(Water.getFluid(5000))
-                .duration(480).EUt(VA[MV]).buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .circuitMeta(3)

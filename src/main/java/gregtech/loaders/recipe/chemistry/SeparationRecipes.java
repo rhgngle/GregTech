@@ -56,12 +56,6 @@ public class SeparationRecipes {
                 .output(dust, Epoxy)
                 .duration(24).EUt(5).buildAndRegister();
 
-        CENTRIFUGE_RECIPES.recipeBuilder()
-                .input(OrePrefix.ore, Oilsands)
-                .chancedOutput(new ItemStack(Blocks.SAND), 5000, 5000)
-                .fluidOutputs(Oil.getFluid(500))
-                .duration(200).EUt(5).buildAndRegister();
-
         CENTRIFUGE_RECIPES.recipeBuilder().duration(144).EUt(5)
                 .inputs(new ItemStack(Items.NETHER_WART))
                 .fluidOutputs(Methane.getFluid(18))
@@ -210,18 +204,8 @@ public class SeparationRecipes {
                 .chancedOutput(dustSmall, Magnesia, 1000, 270)
                 .chancedOutput(dustSmall, Quicklime, 1000, 270)
                 .chancedOutput(nugget, Gold, 250, 80)
-                .chancedOutput(dustSmall, Sapphire, 1250, 270)
+                .chancedOutput(dustSmall, alumina, 1250, 270)
                 .chancedOutput(dustSmall, Tantalite, 500, 130)
-                .buildAndRegister();
-
-        CENTRIFUGE_RECIPES.recipeBuilder().duration(64).EUt(20)
-                .input(dust, RareEarth)
-                .chancedOutput(dustSmall, Cadmium, 2500, 400)
-                .chancedOutput(dustSmall, Neodymium, 2500, 400)
-                .chancedOutput(dustSmall, Samarium, 2500, 400)
-                .chancedOutput(dustSmall, Cerium, 2500, 400)
-                .chancedOutput(dustSmall, Yttrium, 2500, 400)
-                .chancedOutput(dustSmall, Lanthanum, 2500, 400)
                 .buildAndRegister();
 
         CENTRIFUGE_RECIPES.recipeBuilder().duration(50).EUt(VA[LV])
@@ -285,11 +269,6 @@ public class SeparationRecipes {
                 .chancedOutput(dustTiny, Ilmenite, 5000, 500)
                 .buildAndRegister();
 
-        CENTRIFUGE_RECIPES.recipeBuilder().duration(200).EUt(5)
-                .input(dust, Oilsands)
-                .fluidOutputs(Oil.getFluid(1000))
-                .buildAndRegister();
-
         CENTRIFUGE_RECIPES.recipeBuilder().duration(60).EUt(VA[LV])
                 .input(dust, QuartzSand, 2)
                 .output(dust, Quartzite)
@@ -327,12 +306,6 @@ public class SeparationRecipes {
                 .duration(500).EUt(48).buildAndRegister();
 
         // Extractor
-        EXTRACTOR_RECIPES.recipeBuilder()
-                .input(dust, Monazite)
-                .output(dustSmall, RareEarth)
-                .fluidOutputs(Helium.getFluid(200))
-                .duration(64).EUt(64).buildAndRegister();
-
         List<Tuple<ItemStack, Integer>> seedEntries = GTUtility.getGrassSeedEntries();
         for (Tuple<ItemStack, Integer> seedEntry : seedEntries) {
             EXTRACTOR_RECIPES.recipeBuilder()

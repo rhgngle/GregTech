@@ -1,13 +1,7 @@
 package gregtech.api.unification.material.materials;
 
-import gregtech.api.GTValues;
-import gregtech.api.fluids.fluidType.FluidTypes;
-import gregtech.api.unification.Elements;
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.properties.BlastProperty.GasTier;
-import gregtech.api.unification.material.properties.ToolProperty;
 
-import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
@@ -348,6 +342,13 @@ public class GTPICatalyticMaterials {
                 .setFormula("Eu(II):SrB4O7", true);
         counter++;
 
+        rutheniumDisulfide = new Material.Builder(counter, "ruthenium_disulfide")
+                .dust()
+                .color(0xf945ff).iconSet(ROUGH)
+                .build()
+                .setFormula("RuS2", true);
+        counter++;
+
         uncalcinedRutheniumDisulfideOnAlumina = new Material.Builder(counter, "uncalcined_ruthenium_disulfide_on_alumina")
                 .dust()
                 .color(0xab324e).iconSet(ROUGH)
@@ -387,14 +388,63 @@ public class GTPICatalyticMaterials {
                 .dust()
                 .color(0xe3dab3).iconSet(ROUGH)
                 .build()
-                .setFormula("(Ni(NO3)2)(Zn(NO3)2)(HZSM-5)", true);
+                .setFormula("(Ni(NO3)2)(Zn(NO3)2)(Zeolite)", true);
         counter++;
 
         nickelDopedZincOxideOnHZSM5 = new Material.Builder(counter, "nickel_doped_zinc_oxide_on_hzsm_5")
                 .dust()
                 .color(0xe0cb72).iconSet(BRIGHT)
                 .build()
-                .setFormula("Ni/ZnO-HZSM-5", true);
+                .setFormula("Ni/ZnO-Zeolite", true);
+        counter++;
+
+        rutheniumNitrosylNitrate = new Material.Builder(counter, "ruthenium_nitrosyl_nitrate")
+                .dust()
+                .color(0xd45719).iconSet(ROUGH)
+                .build()
+                .setFormula("RuNO(NO3)3", true);
+        counter++;
+
+        bariumNitrate = new Material.Builder(counter, "barium_nitrate")
+                .dust()
+                .color(0xa1837d).iconSet(ROUGH)
+                .build()
+                .setFormula("Ba(NO3)2", true);
+        counter++;
+
+        uncalcinedRutheniumOnAlumina = new Material.Builder(counter, "uncalcined_ruthenium_on_alumina")
+                .dust()
+                .color(0xb83c23).iconSet(ROUGH)
+                .build()
+                .setFormula("(RuNO(NO3)3)(Al2O3)", true);
+        counter++;
+
+        rutheniumOnAlumina = new Material.Builder(counter, "ruthenium_on_alumina")
+                .dust()
+                .color(0xeb5e42).iconSet(BRIGHT)
+                .build()
+                .setFormula("Ru/Al2O3", true);
+        counter++;
+
+        bariumRutheniumOnAlumina = new Material.Builder(counter, "barium_ruthenium_on_alumina")
+                .dust()
+                .color(0xe67e6a).iconSet(BRIGHT)
+                .build()
+                .setFormula("Ba-Ru/Al2O3", true);
+        counter++;
+
+        fluidCatalyticCrackingCatalyst = new Material.Builder(counter, "fluid_catalytic_cracking_catalyst")
+                .dust()
+                .color(0xad621c).iconSet(BRIGHT)
+                .build()
+                .setFormula("Zeolite/SiO2-FeAlSi4O11", true);
+        counter++;
+
+        nitrogenFixationCatalyst = new Material.Builder(counter, "nitrogen_fixation_catalyst")
+                .dust()
+                .color(0x1c1c1c).iconSet(BRIGHT)
+                .build()
+                .setFormula("(Fe)(Fe2O3)(Fe3O4)", true);
         counter++;
 
     }

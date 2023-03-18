@@ -11,17 +11,6 @@ public class LCRCombined {
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .circuitMeta(24)
-                .fluidInputs(Methane.getFluid(3000))
-                .fluidInputs(Nitrogen.getFluid(4000))
-                .fluidInputs(Oxygen.getFluid(3000))
-                .fluidOutputs(Ammonia.getFluid(4000))
-                .fluidOutputs(CarbonMonoxide.getFluid(3000))
-                .EUt(VA[HV])
-                .duration(320)
-                .buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(24)
                 .fluidInputs(Hydrogen.getFluid(6000))
                 .fluidInputs(CarbonMonoxide.getFluid(1000))
                 .fluidOutputs(Methane.getFluid(1000))
@@ -35,19 +24,10 @@ public class LCRCombined {
                 .fluidInputs(Propene.getFluid(1000))
                 .fluidInputs(Benzene.getFluid(1000))
                 .fluidInputs(Oxygen.getFluid(1000))
-                .notConsumable(PhosphoricAcid.getFluid(100))
+                .notConsumable(PhosphoricAcid.getFluid(10))
                 .output(dust, Phenol, 8)
                 .fluidOutputs(Acetone.getFluid(1000))
                 .duration(480).EUt(VA[LV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(24)
-                .fluidInputs(Benzene.getFluid(1000))
-                .fluidInputs(Chlorine.getFluid(2000))
-                .fluidInputs(Water.getFluid(1000))
-                .output(dust, Phenol, 8)
-                .fluidOutputs(HydrochloricAcid.getFluid(2000))
-                .duration(560).EUt(VA[LV]).buildAndRegister();
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .circuitMeta(24)
@@ -60,41 +40,11 @@ public class LCRCombined {
                 .duration(1120).EUt(VA[LV]).buildAndRegister();
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(24)
-                .fluidInputs(LightFuel.getFluid(20000))
-                .fluidInputs(HeavyFuel.getFluid(4000))
-                .fluidOutputs(Diesel.getFluid(24000))
-                .duration(100).EUt(VA[HV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(24)
-                .fluidInputs(Diesel.getFluid(10000))
-                .fluidInputs(Tetranitromethane.getFluid(200))
-                .fluidOutputs(CetaneBoostedDiesel.getFluid(10000))
-                .duration(120).EUt(VA[HV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(24)
-                .fluidInputs(BioDiesel.getFluid(10000))
-                .fluidInputs(Tetranitromethane.getFluid(400))
-                .fluidOutputs(CetaneBoostedDiesel.getFluid(7500))
-                .duration(120).EUt(VA[HV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(AceticAcid.getFluid(3000))
                 .notConsumable(dust, Quicklime)
                 .circuitMeta(24)
                 .fluidOutputs(Acetone.getFluid(2000))
                 .fluidOutputs(Oxygen.getFluid(1000))
                 .duration(400).EUt(VA[HV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(5)
-                .fluidInputs(Oxygen.getFluid(7000))
-                .fluidInputs(Nitrogen.getFluid(2000))
-                .fluidInputs(Hydrogen.getFluid(6000))
-                .fluidOutputs(DinitrogenTetroxide.getFluid(1000))
-                .fluidOutputs(Water.getFluid(3000))
-                .duration(1100).EUt(VA[HV]).buildAndRegister();
     }
 }

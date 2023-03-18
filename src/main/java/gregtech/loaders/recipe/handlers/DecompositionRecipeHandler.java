@@ -19,7 +19,7 @@ import static gregtech.api.GTValues.VA;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 
 public class DecompositionRecipeHandler {
-
+/*
     public static void runRecipeGeneration() {
         for (Material material : GregTechAPI.MATERIAL_REGISTRY) {
             OrePrefix prefix = material.hasProperty(PropertyKey.DUST) ? OrePrefix.dust : null;
@@ -126,5 +126,5 @@ public class DecompositionRecipeHandler {
     private static int getSmallestMaterialAmount(List<Integer> materialAmounts) {
         return materialAmounts.stream().min(Integer::compare).orElse(0);
     }
-
+*/
 }

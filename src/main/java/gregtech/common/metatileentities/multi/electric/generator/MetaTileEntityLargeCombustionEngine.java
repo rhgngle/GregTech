@@ -64,9 +64,10 @@ public class MetaTileEntityLargeCombustionEngine extends FuelMultiblockControlle
         if (isStructureFormed()) {
             if (getInputFluidInventory() != null) {
                 FluidStack lubricantStack = getInputFluidInventory().drain(Materials.Lubricant.getFluid(Integer.MAX_VALUE), false);
+                FluidStack advancedlubricantStack = getInputFluidInventory().drain(Materials.advancedLubricant.getFluid(Integer.MAX_VALUE), false);
                 FluidStack oxygenStack = getInputFluidInventory().drain(Materials.Oxygen.getFluid(Integer.MAX_VALUE), false);
                 FluidStack liquidOxygenStack = getInputFluidInventory().drain(Materials.LiquidOxygen.getFluid(Integer.MAX_VALUE), false);
-                int lubricantAmount = lubricantStack == null ? 0 : lubricantStack.amount;
+                int lubricantAmount = lubricantStack == null ? (advancedlubricantStack == null ? 0 : advancedlubricantStack.amount * 2) : lubricantStack.amount;
                 textList.add(new TextComponentTranslation("gregtech.multiblock.large_combustion_engine.lubricant_amount", lubricantAmount));
                 if (boostAllowed) {
                     if (!isExtreme) {
@@ -212,7 +213,8 @@ public class MetaTileEntityLargeCombustionEngine extends FuelMultiblockControlle
 
         private static final FluidStack OXYGEN_STACK = Materials.Oxygen.getFluid(20);
         private static final FluidStack LIQUID_OXYGEN_STACK = Materials.LiquidOxygen.getFluid(80);
-        private static final FluidStack LUBRICANT_STACK = Materials.Lubricant.getFluid(1);
+        private static final FluidStack LUBRICANT_STACK = Materials.Lubricant.getFluid(2);
+        private static final FluidStack ADVANCED_LUBRICANT_STACK = Materials.Lubricant.getFluid(1);
 
         public LargeCombustionEngineWorkableHandler(RecipeMapMultiblockController tileEntity, boolean isExtreme) {
             super(tileEntity);
@@ -226,13 +228,17 @@ public class MetaTileEntityLargeCombustionEngine extends FuelMultiblockControlle
             if (canRecipeProgress && drawEnergy(recipeEUt, true)) {
 
                 //drain lubricant and invalidate if it fails
-                if (totalContinuousRunningTime == 1 || totalContinuousRunningTime % 72 == 0) {
+                if (totalContinuousRunningTime == 2 || totalContinuousRunningTime % 144 == 0) {
                     IMultipleTankHandler inputTank = combustionEngine.getInputFluidInventory();
                     if (LUBRICANT_STACK.isFluidStackIdentical(inputTank.drain(LUBRICANT_STACK, false))) {
                         inputTank.drain(LUBRICANT_STACK, true);
                     } else {
-                        invalidate();
-                        return;
+                        if (ADVANCED_LUBRICANT_STACK.isFluidStackIdentical(inputTank.drain(ADVANCED_LUBRICANT_STACK, false))) {
+                            inputTank.drain(LUBRICANT_STACK, true);
+                        } else {
+                            invalidate();
+                            return;
+                        }
                     }
                 }
 

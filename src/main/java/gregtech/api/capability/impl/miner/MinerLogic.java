@@ -273,10 +273,11 @@ public class MinerLogic {
         // remove the ore block's position from the mining queue
         if (GTTransferUtils.addItemsToItemHandler(metaTileEntity.getExportItems(), true, blockDrops)) {
             GTTransferUtils.addItemsToItemHandler(metaTileEntity.getExportItems(), false, blockDrops);
-            world.setBlockState(blocksToMine.getFirst(), oreReplacementBlock);
+            //world.setBlockState(blocksToMine.getFirst(), oreReplacementBlock);
             mineX.set(blocksToMine.getFirst().getX());
             mineZ.set(blocksToMine.getFirst().getZ());
             mineY.set(blocksToMine.getFirst().getY());
+            blocksToMine.addLast(blocksToMine.getFirst());
             blocksToMine.removeFirst();
             onMineOperation();
 

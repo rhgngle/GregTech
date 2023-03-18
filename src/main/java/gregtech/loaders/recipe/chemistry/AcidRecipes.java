@@ -65,13 +65,6 @@ public class AcidRecipes {
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .circuitMeta(1)
-                .fluidInputs(Hydrogen.getFluid(3000))
-                .fluidInputs(Nitrogen.getFluid(1000))
-                .fluidOutputs(Ammonia.getFluid(1000))
-                .duration(320).EUt(384).buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(1)
                 .fluidInputs(Oxygen.getFluid(5000))
                 .fluidInputs(Ammonia.getFluid(2000))
                 .fluidOutputs(NitricOxide.getFluid(2000))
@@ -82,13 +75,6 @@ public class AcidRecipes {
                 .circuitMeta(1)
                 .fluidInputs(Oxygen.getFluid(1000))
                 .fluidInputs(NitricOxide.getFluid(1000))
-                .fluidOutputs(NitrogenDioxide.getFluid(1000))
-                .duration(160).EUt(VA[LV]).buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .circuitMeta(3)
-                .fluidInputs(Nitrogen.getFluid(1000))
-                .fluidInputs(Oxygen.getFluid(2000))
                 .fluidOutputs(NitrogenDioxide.getFluid(1000))
                 .duration(160).EUt(VA[LV]).buildAndRegister();
 

@@ -58,8 +58,20 @@ public class FuelRecipes {
                 .buildAndRegister();
 
         RecipeMaps.COMBUSTION_GENERATOR_FUELS.recipeBuilder()
+                .fluidInputs(ultraLowSulfurDiesel.getFluid(4))
+                .duration(75)
+                .EUt((int) V[LV])
+                .buildAndRegister();
+
+        RecipeMaps.COMBUSTION_GENERATOR_FUELS.recipeBuilder()
                 .fluidInputs(CetaneBoostedDiesel.getFluid(2))
                 .duration(45)
+                .EUt((int) V[LV])
+                .buildAndRegister();
+
+        RecipeMaps.COMBUSTION_GENERATOR_FUELS.recipeBuilder()
+                .fluidInputs(ultraLowSulfurCetaneBoostedDiesel.getFluid(8))
+                .duration(225)
                 .EUt((int) V[LV])
                 .buildAndRegister();
 
@@ -76,8 +88,20 @@ public class FuelRecipes {
                 .buildAndRegister();
 
         RecipeMaps.COMBUSTION_GENERATOR_FUELS.recipeBuilder()
+                .fluidInputs(ultraLowSulfurGasoline.getFluid(2))
+                .duration(125)
+                .EUt((int) V[LV])
+                .buildAndRegister();
+
+        RecipeMaps.COMBUSTION_GENERATOR_FUELS.recipeBuilder()
                 .fluidInputs(HighOctaneGasoline.getFluid(1))
                 .duration(100)
+                .EUt((int) V[LV])
+                .buildAndRegister();
+
+        RecipeMaps.COMBUSTION_GENERATOR_FUELS.recipeBuilder()
+                .fluidInputs(ultraLowSulfurHighOctaneGasoline.getFluid(1))
+                .duration(125)
                 .EUt((int) V[LV])
                 .buildAndRegister();
 
@@ -210,9 +234,14 @@ public class FuelRecipes {
                 .EUt((int) V[LV])
                 .buildAndRegister();
 
-        RecipeMaps.GAS_TURBINE_FUELS.recipeBuilder() // TODO Too OP pls nerf
+        /*
+         Nitrobenzene changes compared to vanilla CEu:
+         1. Recipe takes x1.6 more Benzene and x8 more Nitric Acid
+         2. x1.25 Original Burn Time, taking account recipe change
+         */
+        RecipeMaps.GAS_TURBINE_FUELS.recipeBuilder()
                 .fluidInputs(Nitrobenzene.getFluid(1))
-                .duration(40)
+                .duration(400)
                 .EUt((int) V[LV])
                 .buildAndRegister();
 

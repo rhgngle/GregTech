@@ -431,7 +431,7 @@ public class CraftingComponent {
 
                 {0, new UnificationEntry(OrePrefix.rotor, Materials.Lead)},
                 {1, new UnificationEntry(OrePrefix.rotor, Materials.Steel)},
-                {2, new UnificationEntry(OrePrefix.rotor, Materials.birmabright)},
+                {2, new UnificationEntry(OrePrefix.rotor, Materials.Magnalium)},
                 {3, new UnificationEntry(OrePrefix.rotor, Materials.udimet69420)},
                 {4, new UnificationEntry(OrePrefix.rotor, Materials.scandalloy)},
                 {5, new UnificationEntry(OrePrefix.rotor, Materials.IncoloyMA956)},

@@ -424,7 +424,7 @@ public class RecipeMaps {
      * </pre>
      */
     @ZenProperty
-    public static final RecipeMap<SimpleRecipeBuilder> CRACKING_RECIPES = new RecipeMapCrackerUnit<>("cracker", 0, 1, 0, 0, 2, 2, 0, 2, new SimpleRecipeBuilder(), false)
+    public static final RecipeMap<SimpleRecipeBuilder> CRACKING_RECIPES = new RecipeMapCrackerUnit<>("cracker", 0, 1, 0, 1, 0, 2, 0, 3, new SimpleRecipeBuilder(), false)
             .setSlotOverlay(false, true, GuiTextures.CRACKING_OVERLAY_1)
             .setSlotOverlay(true, true, GuiTextures.CRACKING_OVERLAY_2)
             .setSlotOverlay(false, false, GuiTextures.CIRCUIT_OVERLAY)
@@ -1005,7 +1005,7 @@ public class RecipeMaps {
      * </pre>
      */
     @ZenProperty
-    public static final RecipeMap<SimpleRecipeBuilder> PYROLYSE_RECIPES = new RecipeMap<>("pyrolyse_oven", 2, 2, 0, 1, 0, 1, 0, 1, new SimpleRecipeBuilder(), false)
+    public static final RecipeMap<SimpleRecipeBuilder> PYROLYSE_RECIPES = new RecipeMap<>("pyrolyse_oven", 0, 2, 0, 1, 0, 1, 0, 1, new SimpleRecipeBuilder(), false)
             .setSound(GTSoundEvents.FIRE);
 
     /**
@@ -1080,6 +1080,8 @@ public class RecipeMaps {
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.CENTRIFUGE);
 
+    public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_REFORMATION_RECIPES = new RecipeMap<>("catalytic_reformation", 0, 1, 0, 0, 0, 1, 0, 3, new SimpleRecipeBuilder(), false);
+
     public static final RecipeMap<SimpleRecipeBuilder> CRUDE_DISTILLATION_RECIPES = new RecipeMap<>("crude_distillation", 0, 0, 0, 1, 0, 1, 0, 12, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION_RECIPES = new RecipeMap<>("crystallization", 0, 6, 0, 1, 0, 3, 0, 0, new SimpleRecipeBuilder(), false);
@@ -1092,7 +1094,7 @@ public class RecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> SOLVENT_EXTRACTION_RECIPES = new RecipeMap<>("solvent_extraction", 0, 3, 0, 0, 0, 4, 0, 4, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> S_ZORB_RECIPES = new RecipeMap<>("s_zorb_desulfurization", 0, 2, 0, 1, 0, 2, 0, 1, new SimpleRecipeBuilder(), false);
+    public static final RecipeMap<SimpleRecipeBuilder> S_ZORB_RECIPES = new RecipeMap<>("s_zorb_desulfurization", 0, 2, 0, 0, 0, 4, 0, 3, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DISTILLATION_RECIPES = new RecipeMap<>("vacuum_distillation", 0, 0, 0, 1, 0, 1, 0, 12, new SimpleRecipeBuilder(), false);
 

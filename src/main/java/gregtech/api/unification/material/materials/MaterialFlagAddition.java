@@ -176,7 +176,6 @@ public class MaterialFlagAddition {
 
         oreProp = Magnesite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(Magnesia, Magnesia, Cobaltite);
-        oreProp.setDirectSmeltResult(Magnesium);
 
         oreProp = Magnetite.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(Magnetite, Gold);

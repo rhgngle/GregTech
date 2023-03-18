@@ -298,7 +298,7 @@ public class FirstDegreeMaterials {
         Kanthal = new Material.Builder(288, "kanthal")
                 .ingot().fluid()
                 .color(0xC2D2DF).iconSet(METALLIC)
-                .flags(EXT_METAL, GENERATE_SPRING)
+                .flags(EXT_METAL, GENERATE_SPRING, GENERATE_FINE_WIRE)
                 .components(Iron, 1, Aluminium, 1, Chrome, 1)
                 .cableProperties(GTValues.V[3], 4, 3)
                 .blastTemp(1800, GasTier.LOW, VA[MV], 1000)
@@ -1174,7 +1174,7 @@ public class FirstDegreeMaterials {
                 .gem(1)
                 .color(0x6CDCC8)
                 .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
-                .components(Beryllium, 1, Potassium, 4, Nitrogen, 2)
+                .components(Beryllium, 1, Potassium, 1, Nitrogen, 1)
                 .build();
 
         PotassiumFeldspar = new Material.Builder(417, "potassium_feldspar")

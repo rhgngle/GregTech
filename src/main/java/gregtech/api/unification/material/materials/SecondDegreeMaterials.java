@@ -63,7 +63,7 @@ public class SecondDegreeMaterials {
                 .gem(3).ore()
                 .color(0xD232D2).iconSet(RUBY)
                 .flags(EXT_METAL, NO_SMASHING, NO_SMELTING, HIGH_SIFTER_OUTPUT)
-                .components(SiliconDioxide, 4, Iron, 1)
+                .components(SiliconDioxide, 1)
                 .build();
 
         Lapis = new Material.Builder(2007, "lapis")

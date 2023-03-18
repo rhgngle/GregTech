@@ -40,14 +40,23 @@ public class MixerRecipes {
 
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(BioDiesel.getFluid(1000))
-                .fluidInputs(Tetranitromethane.getFluid(40))
+                .fluidInputs(dimethylEther.getFluid(980))
+                .fluidInputs(Tetranitromethane.getFluid(20))
                 .fluidOutputs(CetaneBoostedDiesel.getFluid(750))
                 .duration(20).EUt(VA[HV]).buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(Diesel.getFluid(1000))
-                .fluidInputs(Tetranitromethane.getFluid(20))
-                .fluidOutputs(CetaneBoostedDiesel.getFluid(1000))
+                .fluidInputs(dimethylEther.getFluid(490))
+                .fluidInputs(Tetranitromethane.getFluid(10))
+                .fluidOutputs(CetaneBoostedDiesel.getFluid(1500))
+                .duration(20).EUt(VA[HV]).buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(ultraLowSulfurDiesel.getFluid(1000))
+                .fluidInputs(dimethylEther.getFluid(490))
+                .fluidInputs(Tetranitromethane.getFluid(10))
+                .fluidOutputs(ultraLowSulfurCetaneBoostedDiesel.getFluid(1500))
                 .duration(20).EUt(VA[HV]).buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder()
@@ -66,6 +75,12 @@ public class MixerRecipes {
                 .fluidInputs(LightFuel.getFluid(5000))
                 .fluidInputs(HeavyFuel.getFluid(1000))
                 .fluidOutputs(Diesel.getFluid(6000))
+                .duration(16).EUt(VA[MV]).buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(ultraLowSulfurOctaneBoostedLightFuel.getFluid(5000))
+                .fluidInputs(ultraLowSulfurHeavyFuel.getFluid(1000))
+                .fluidOutputs(ultraLowSulfurDiesel.getFluid(6000))
                 .duration(16).EUt(VA[MV]).buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder()
@@ -92,6 +107,14 @@ public class MixerRecipes {
                 .duration(40).EUt(16).buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder()
+                .input(dust, Stone, 2)
+                .input(dust, asphalt)
+                .input(dust, Gypsum)
+                .fluidInputs(Water.getFluid(1000))
+                .fluidOutputs(Concrete.getFluid(2304))
+                .duration(40).EUt(16).buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(Concrete.getFluid(576))
                 .input(dust, RawRubber)
                 .fluidOutputs(ConstructionFoam.getFluid(8000))
@@ -106,9 +129,9 @@ public class MixerRecipes {
 
         FURNACE_RECIPES.recipeBuilder().duration(160).EUt(VA[HV])
                 .fluidInputs(Beryllium.getFluid(144))
-                .fluidInputs(Potassium.getFluid(576))
-                .fluidInputs(Nitrogen.getFluid(2000))
-                .output(dust, EnderPearl, 6)
+                .fluidInputs(Potassium.getFluid(144))
+                .fluidInputs(Nitrogen.getFluid(1000))
+                .output(dust, EnderPearl, 3)
                 .buildAndRegister();
 
         // Alloys

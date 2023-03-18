@@ -1,13 +1,8 @@
 package gregtech.api.unification.material.materials;
 
-import gregtech.api.GTValues;
 import gregtech.api.fluids.fluidType.FluidTypes;
-import gregtech.api.unification.Elements;
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.properties.BlastProperty.GasTier;
-import gregtech.api.unification.material.properties.ToolProperty;
 
-import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
@@ -38,50 +33,303 @@ public class GTPIOrganicMaterials {
                 .color(0x593c06).iconSet(DULL)
                 .flags(FLAMMABLE, GENERATE_PLATE)
                 .build()
-                .setFormula("C16H24O", true);
+                .setFormula("(C15H24O)(CH2O)", true);
         counter++;
 
         ethoxylatedNonylphenolFormaldehydeResin = new Material.Builder(counter, "ethoxylated_nonylphenol_formaldehyde_resin")
                 .dust()
                 .color(0xd43b52).iconSet(DULL)
-                .build();
+                .build()
+                .setFormula("(C15H24O)(CH2O)(C2H4O)", true);
         counter++;
 
-        desaltedOil = new Material.Builder(counter, "desalted_oil")
+        deacidifiedOil = new Material.Builder(counter, "deacidified_oil")
                 .fluid()
                 .color(Oil.getMaterialRGB())
                 .build();
         counter++;
 
-        desaltedHeavyOil = new Material.Builder(counter, "desalted_heavy_oil")
+        deacidifiedHeavyOil = new Material.Builder(counter, "deacidified_heavy_oil")
                 .fluid()
                 .color(OilHeavy.getMaterialRGB())
                 .build();
         counter++;
 
-        desaltedRawOil = new Material.Builder(counter, "desalted_raw_oil")
+        deacidifiedRawOil = new Material.Builder(counter, "deacidified_raw_oil")
                 .fluid()
                 .color(RawOil.getMaterialRGB())
                 .build();
         counter++;
 
-        desaltedLightOil = new Material.Builder(counter, "desalted_light_oil")
+        deacidifiedLightOil = new Material.Builder(counter, "deacidified_light_oil")
                 .fluid()
                 .color(OilLight.getMaterialRGB())
                 .build();
         counter++;
 
-        oilDepletedBrine = new Material.Builder(counter, "oil_depleted_brine")
+        deacidifiedDesaltedOil = new Material.Builder(counter, "deacidified_desalted_oil")
+                .fluid()
+                .color(Oil.getMaterialRGB())
+                .build();
+        counter++;
+
+        deacidifiedDesaltedHeavyOil = new Material.Builder(counter, "deacidified_desalted_heavy_oil")
+                .fluid()
+                .color(OilHeavy.getMaterialRGB())
+                .build();
+        counter++;
+
+        deacidifiedDesaltedRawOil = new Material.Builder(counter, "deacidified_desalted_raw_oil")
+                .fluid()
+                .color(RawOil.getMaterialRGB())
+                .build();
+        counter++;
+
+        deacidifiedDesaltedLightOil = new Material.Builder(counter, "deacidified_desalted_light_oil")
+                .fluid()
+                .color(OilLight.getMaterialRGB())
+                .build();
+        counter++;
+
+        naphthenateRichPetroleumWastewater = new Material.Builder(counter, "naphthenate_rich_petroleum_wastewater")
                 .fluid()
                 .color(0x95dce8)
                 .build()
-                .setFormula("(H2O)", true);
+                .setFormula("(Na2SO4)(MgCl2)(CaCl2)(H2O)?", true);
+        counter++;
+
+        naphthenicAcid = new Material.Builder(counter, "naphthenic_acid")
+                .fluid()
+                .color(0xe0e0e0)
+                .build();
+        counter++;
+
+        petroleumWastewater = new Material.Builder(counter, "petroleum_wastewater")
+                .fluid()
+                .color(0x95dce8)
+                .build()
+                .setFormula("(Na2SO4)(MgCl2)(CaCl2)(H2O)", true);
+        counter++;
+
+        magnesiumDepletedpetroleumWastewater = new Material.Builder(counter, "magnesium_depleted_petroleum_wastewater")
+                .fluid()
+                .color(0x95dce8)
+                .build()
+                .setFormula("(Na2SO4)(NaCl)(CaCl2)(H2O)", true);
+        counter++;
+
+        magnesiumCalciumDepletedpetroleumWastewater = new Material.Builder(counter, "magnesium_calcium_depleted_petroleum_wastewater")
+                .fluid()
+                .color(0x95dce8)
+                .build()
+                .setFormula("(Na2SO4)(NaCl)(H2O)", true);
         counter++;
 
         atmosphericResidue = new Material.Builder(counter, "atmospheric_residue")
                 .fluid()
                 .color(0x383838).iconSet(DULL)
                 .build();
+        counter++;
+
+        olefinRichRefineryGas = new Material.Builder(counter, "olefin_rich_refinery_gas")
+                .fluid(FluidTypes.GAS)
+                .color(0xdedede)
+                .build();
+        counter++;
+
+        ultraLowSulfurHeavyFuel = new Material.Builder(counter, "ultra_low_sulfur_heavy_fuel")
+                .fluid()
+                .color(0xedda2f)
+                .build();
+        counter++;
+
+        ultraLowSulfurLightFuel = new Material.Builder(counter, "ultra_low_sulfur_light_fuel")
+                .fluid()
+                .color(0xedda2f)
+                .build();
+        counter++;
+
+        ultraLowSulfurNaphtha = new Material.Builder(counter, "ultra_low_sulfur_naphtha")
+                .fluid()
+                .color(0xedda2f)
+                .build();
+        counter++;
+
+        nonane = new Material.Builder(counter, "nonane")
+                .fluid()
+                .color(0x4d6e41)
+                .build()
+                .setFormula("C9H20", true);
+        counter++;
+
+        undecane = new Material.Builder(counter, "undecane")
+                .fluid()
+                .color(0x36544b)
+                .build()
+                .setFormula("C11H24", true);
+        counter++;
+
+        tridecane = new Material.Builder(counter, "tridecane")
+                .fluid()
+                .color(0x30494a)
+                .build()
+                .setFormula("C13H28", true);
+        counter++;
+
+        tetradecane = new Material.Builder(counter, "tetradecane")
+                .fluid()
+                .color(0x3c515c)
+                .build()
+                .setFormula("C14H30", true);
+        counter++;
+
+        pentadecane = new Material.Builder(counter, "pentadecane")
+                .fluid()
+                .color(0x47536e)
+                .build()
+                .setFormula("C15H32", true);
+        counter++;
+
+        hexadecane = new Material.Builder(counter, "hexadecane")
+                .fluid()
+                .color(0x42415c)
+                .build()
+                .setFormula("C16H34", true);
+        counter++;
+
+        naphthaReformate = new Material.Builder(counter, "naphtha_reformate")
+                .fluid()
+                .color(0xedda2f).iconSet(DULL)
+                .build();
+        counter++;
+
+        ultraLowSulfurNaphthaReformate = new Material.Builder(counter, "ultra_low_sulfur_naphtha_reformate")
+                .fluid()
+                .color(0xedda2f).iconSet(DULL)
+                .build();
+        counter++;
+
+        btxMixture = new Material.Builder(counter, "btx_mixture")
+                .fluid()
+                .color(0x210e0a).iconSet(DULL)
+                .build()
+                .setFormula("(C6H6)(C7H8)(C8H10)(C5H4O2)", true);
+        counter++;
+
+        xylene = new Material.Builder(counter, "xylene")
+                .fluid()
+                .color(0x8a8a8a)
+                .build()
+                .setFormula("C8H10", true);
+        counter++;
+
+        aromaticsDepletedNaphthaReformate = new Material.Builder(counter, "aromatics_depleted_naphtha_reformate")
+                .fluid()
+                .color(0xffe369)
+                .build();
+        counter++;
+
+        aromaticsDepletedUltraLowSulfurNaphthaReformate = new Material.Builder(counter, "aromatics_depleted_ultra_low_sulfur_naphtha_reformate")
+                .fluid()
+                .color(0xffe369)
+                .build();
+        counter++;
+
+        octaneBoostedLightFuel = new Material.Builder(counter, "octane_boosted_light_fuel")
+                .fluid()
+                .color(0xed9f18)
+                .build();
+        counter++;
+
+        octaneBoostedNaphtha = new Material.Builder(counter, "octane_boosted_naphtha")
+                .fluid()
+                .color(0xed9f18)
+                .build();
+        counter++;
+
+        ultraLowSulfurOctaneBoostedLightFuel = new Material.Builder(counter, "ultra_low_sulfur_octane_boosted_light_fuel")
+                .fluid()
+                .color(0xed9f18)
+                .build();
+        counter++;
+
+        ultraLowSulfurOctaneBoostedNaphtha = new Material.Builder(counter, "ultra_low_sulfur_octane_boosted_naphtha")
+                .fluid()
+                .color(0xed9f18)
+                .build();
+        counter++;
+
+        ultraLowSulfurDiesel = new Material.Builder(counter, "ultra_low_sulfur_diesel")
+                .fluid()
+                .color(0xc4c400)
+                .build();
+        counter++;
+
+        ultraLowSulfurCetaneBoostedDiesel = new Material.Builder(counter, "ultra_low_sulfur_cetane_boosted_diesel")
+                .fluid()
+                .color(CetaneBoostedDiesel.getMaterialRGB())
+                .build();
+        counter++;
+
+        ultraLowSulfurGasoline = new Material.Builder(counter, "ultra_low_sulfur_gasoline")
+                .fluid()
+                .color(Gasoline.getMaterialRGB())
+                .build();
+        counter++;
+
+        ultraLowSulfurHighOctaneGasoline = new Material.Builder(counter, "ultra_low_sulfur_high_octane_gasoline")
+                .fluid()
+                .color(HighOctaneGasoline.getMaterialRGB())
+                .build();
+        counter++;
+
+        dimethylEther = new Material.Builder(counter, "dimethyl_ether")
+                .fluid(FluidTypes.GAS)
+                .color(0xe3b86d)
+                .build()
+                .setFormula("C2H6O", true);
+        counter++;
+
+        nitroform = new Material.Builder(counter, "nitroform")
+                .fluid()
+                .color(0x27a88a)
+                .build()
+                .setFormula("CHN3O6", true);
+        counter++;
+
+        nitratedAlkanes = new Material.Builder(counter, "nitrated_alkanes")
+                .fluid(FluidTypes.GAS)
+                .color(0x27a88a)
+                .build()
+                .setFormula("(CH3NO2)(C2H5NO2)(C3H7NO2)(C3H7NO2)(H2O)", true);
+        counter++;
+
+        nitromethane = new Material.Builder(counter, "nitromethane")
+                .fluid()
+                .color(0x27a88a)
+                .build()
+                .setFormula("CH3NO2", true);
+        counter++;
+
+        nitroethane = new Material.Builder(counter, "nitroethane")
+                .fluid()
+                .color(0x27a88a)
+                .build()
+                .setFormula("C2H5NO2", true);
+        counter++;
+
+        nitropropane1 = new Material.Builder(counter, "nitropropane_1")
+                .fluid()
+                .color(0x27a88a)
+                .build()
+                .setFormula("C3H7NO2", true);
+        counter++;
+
+        nitropropane2 = new Material.Builder(counter, "nitropropane_2")
+                .fluid()
+                .color(0x27a88a)
+                .build()
+                .setFormula("C3H7NO2", true);
         counter++;
 
         isobutane = new Material.Builder(counter, "isobutane")
@@ -98,19 +346,49 @@ public class GTPIOrganicMaterials {
                 .setFormula("C4H8", true);
         counter++;
 
+        vacuumDistillationResidue = new Material.Builder(counter, "vacuum_distillation_residue")
+                .fluid()
+                .color(0x3d3d3d)
+                .build();
+        counter++;
+
+        sulfuricDeasphaltedOil = new Material.Builder(counter, "sulfuric_deasphalted_oil")
+                .fluid()
+                .color(0x9c8e2a).iconSet(DULL)
+                .build();
+        counter++;
+
+        deasphaltedOil = new Material.Builder(counter, "deasphalted_oil")
+                .fluid()
+                .color(0x666666)
+                .build();
+        counter++;
+
+        asphalt = new Material.Builder(counter, "asphalt")
+                .dust()
+                .color(0x242424).iconSet(DULL)
+                .build();
+        counter++;
+
+        petroleumCoke = new Material.Builder(counter, "petroleum_coke")
+                .gem()
+                .color(0x131313).iconSet(LIGNITE)
+                .build()
+                .setFormula("C", true);
+        counter++;
+
+        rawLubricant = new Material.Builder(counter, "raw_lubricant")
+                .fluid()
+                .color(0xfcf86a)
+                .build();
+        counter++;
+
         // Solvents Chain
         dodecene = new Material.Builder(counter, "dodecene")
                 .fluid()
                 .color(0x4da387)
                 .build()
                 .setFormula("C12H24", true);
-        counter++;
-
-        dodecane = new Material.Builder(counter, "dodecane")
-                .fluid()
-                .color(0x7ccfb4)
-                .build()
-                .setFormula("C12H26", true);
         counter++;
 
         isopropylAlcohol = new Material.Builder(counter, "isopropyl_alcohol")
@@ -804,11 +1082,11 @@ public class GTPIOrganicMaterials {
         counter++;
 
         // Adamantane Chain
-        dicyclopentadiene = new Material.Builder(counter, "dicyclopentadiene")
-                .dust().fluid()
-                .color(0x9a9c54).iconSet(DULL)
+        cyclopentadiene = new Material.Builder(counter, "cyclopentadiene")
+                .fluid()
+                .color(0x9a9c54)
                 .build()
-                .setFormula("C10H12", true);
+                .setFormula("C5H6", true);
         counter++;
 
         tetrahydrodicyclopentadiene = new Material.Builder(counter, "tetrahydrodicyclopentadiene")
@@ -831,7 +1109,7 @@ public class GTPIOrganicMaterials {
                 .build();
         counter++;
 
-        crudeAdvancedLubricant = new Material.Builder(counter, "crude_advanced_lubricant")
+        adamantaneOil = new Material.Builder(counter, "adamantane_oil")
                 .fluid()
                 .color(0x87ff00)
                 .build();
@@ -882,9 +1160,16 @@ public class GTPIOrganicMaterials {
 
         pentene = new Material.Builder(counter, "pentene")
                 .fluid()
-                .color(0xa39b40)
+                .color(0x9c9440)
                 .build()
                 .setFormula("C5H10", true);
+        counter++;
+
+        pentane = new Material.Builder(counter, "pentane")
+                .fluid()
+                .color(0x6e693a)
+                .build()
+                .setFormula("C5H12", true);
         counter++;
 
         caproaldehyde = new Material.Builder(counter, "caproaldehyde")
@@ -908,6 +1193,13 @@ public class GTPIOrganicMaterials {
                 .setFormula("C6H12", true);
         counter++;
 
+        hexane = new Material.Builder(counter, "hexane")
+                .fluid()
+                .color(0x656e41)
+                .build()
+                .setFormula("C6H14", true);
+        counter++;
+
         enanthaldehyde = new Material.Builder(counter, "enanthaldehyde")
                 .fluid()
                 .color(0xaccc2b)
@@ -929,6 +1221,13 @@ public class GTPIOrganicMaterials {
                 .setFormula("C7H14", true);
         counter++;
 
+        heptane = new Material.Builder(counter, "heptane")
+                .fluid()
+                .color(0x5d663b)
+                .build()
+                .setFormula("C7H16", true);
+        counter++;
+
         caprylaldehyde = new Material.Builder(counter, "caprylaldehyde")
                 .fluid()
                 .color(0x77c72c)
@@ -941,6 +1240,20 @@ public class GTPIOrganicMaterials {
                 .color(0x669c33)
                 .build()
                 .setFormula("C8H18O", true);
+        counter++;
+
+        octene = new Material.Builder(counter, "octene")
+                .fluid()
+                .color(0x558c41)
+                .build()
+                .setFormula("C8H16", true);
+        counter++;
+
+        octane = new Material.Builder(counter, "octane")
+                .fluid()
+                    .color(0x4d6e41)
+                .build()
+                .setFormula("C8H18", true);
         counter++;
 
         butyricAcid = new Material.Builder(counter, "butyric_acid")
@@ -1111,11 +1424,39 @@ public class GTPIOrganicMaterials {
                 .setFormula("C10H22O", true);
         counter++;
 
+        decene = new Material.Builder(counter, "decene")
+                .fluid()
+                .color(0x346e3e)
+                .build()
+                .setFormula("C10H20", true);
+        counter++;
+
+        decane = new Material.Builder(counter, "decane")
+                .fluid()
+                .color(0x2f4d34)
+                .build()
+                .setFormula("C10H22", true);
+        counter++;
+
         dodecanol = new Material.Builder(counter, "dodecanol")
                 .dust().fluid()
                 .color(0x308a6d)
                 .build()
                 .setFormula("C12H26O", true);
+        counter++;
+
+        dodecene = new Material.Builder(counter, "dodecene")
+                .fluid()
+                .color(0x356e5b)
+                .build()
+                .setFormula("C12H24", true);
+        counter++;
+
+        dodecane = new Material.Builder(counter, "dodecane")
+                .fluid()
+                .color(0x304a41)
+                .build()
+                .setFormula("C12H26", true);
         counter++;
 
         methylchlorosilanesMixture = new Material.Builder(counter, "methylchlorosilanes_mixture")

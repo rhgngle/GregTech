@@ -30,7 +30,8 @@ public class HigherDegreeMaterials {
                 .dust(1).ore()
                 .color(0xE1E1E1)
                 .components(Flint, 8, BandedIron, 1, Sapphire, 1)
-                .build();
+                .build()
+                .setFormula("FeAlSi4O11", true);
 
         RedSteel = new Material.Builder(2510, "red_steel")
                 .ingot(3).fluid()

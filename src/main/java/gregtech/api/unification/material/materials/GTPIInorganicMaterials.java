@@ -449,26 +449,7 @@ public class GTPIInorganicMaterials {
                 .setFormula("(H2SO4)(H2O2)", true);
         counter++;
 
-        bakelite = new Material.Builder(counter, "bakelite")
-                .ingot()
-                .color(0x85593a).iconSet(DULL)
-                .flags(GENERATE_PLATE)
-                .build()
-                .setFormula("C7H6O", true);
-        counter++;
-
         // Alternate Materials Chain
-        birmabright = new Material.Builder(counter, "birmabright")
-                .ingot()
-                .color(0x4779d6).iconSet(METALLIC)
-                .blastTemp(1700, GasTier.LOW, 120, -1)
-                .flags(GENERATE_ROTOR, GENERATE_BOLT_SCREW, GENERATE_LONG_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR)
-                .components(Aluminium, 5, Magnesium, 2, Manganese, 1)
-                .rotorStats(10.0f, 2.0f, 164)
-                .fluidPipeProperties(1166, 100, true)
-                .build();
-        counter++;
-
         udimet69420 = new Material.Builder(counter, "udimet_69420")
                 .ingot()
                 .color(0xc95a1e).iconSet(METALLIC)
@@ -531,7 +512,7 @@ public class GTPIInorganicMaterials {
         regalohm62 = new Material.Builder(counter, "regalohm_62")
                 .ingot()
                 .color(0x7c7394).iconSet(SHINY)
-                .flags(GENERATE_SPRING)
+                .flags(GENERATE_SPRING, GENERATE_FINE_WIRE)
                 .components(Platinum, 9, Tungsten, 1)
                 .blastTemp(3600, GasTier.HIGH, 1920, 1000)
                 .cableProperties(GTValues.V[5], 3, 2)
